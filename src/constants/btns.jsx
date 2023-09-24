@@ -1,6 +1,6 @@
 export const Btns = [
     {
-      title: '사료·간식',
+      title: '사료·간식 박스',
       collectionCode:'sfmktest15', // pet-dec-top20-1
       onImgUrl: '',
       imgUrl: 'https://image.fnnews.com/resource/media/image/2021/12/23/202112232132269156_l.jpg',
