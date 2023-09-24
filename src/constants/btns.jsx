@@ -3,7 +3,7 @@ export const Btns = [
       title: '사료·간식',
       collectionCode:'sfmktest15', // pet-dec-top20-1
       onImgUrl: '',
-      imgUrl: 'http://www.dizzotv.com/site/data/img_dir/2020/10/20/2020102080126_1.jpg',
+      imgUrl: 'https://image.fnnews.com/resource/media/image/2021/12/23/202112232132269156_l.jpg',
       viewAllUrl:'viewAllUrl_1',
       linkUrlPC: 'https://www.kurly.com/goods-list?category=1111',
       linkUrlMobile: 'https://www.kurly.com/m2/goods/list.php?category=1111',
@@ -12,7 +12,7 @@ export const Btns = [
       title: '외출·리빙',
       collectionCode:'sfmktest04', // pet-dec-top20-2
       onImgUrl: '',
-      imgUrl: 'https://img.allurekorea.com/allure/2022/12/style_639eabe4562ed.jpg',
+      imgUrl: 'https://image.fnnews.com/resource/media/image/2021/12/23/202112232133485835_l.jpg',
       viewAllUrl:'viewAllUrl_2',
       linkUrlPC: 'https://www.kurly.com/goods-list?category=2222',
       linkUrlMobile: 'https://www.kurly.com/m2/goods/list.php?category=2222',
