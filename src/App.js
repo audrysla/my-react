@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import styled from "styled-components";
-import './App.css';
+// import './App.css';
+import './sample.css';
 
 import Items from './components/tab/items'
 import { Btns } from './constants/btns' 

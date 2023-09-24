@@ -1,0 +1,55 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  text-align: center;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Malgun Gothic, 맑은 고딕, helvetica, Apple SD Gothic Neo, sans-serif;
+}
+
+.tabArea {
+  display: inline-block;
+  padding: 10px;
+  max-width: 500px;
+}
+.tabArea ul {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tabArea ul li {
+  flex: 1 1 45%;
+  text-align: center;
+}
+.tabArea ul li a {
+  display: block;
+  border: 1px solid;
+  color: #333;
+  font-size: 1em;
+  border-radius: 100px;
+  padding: 10px 0;
+}
+.tabArea ul li a.on {
+  background-color: gold;
+}
+.tabArea .thumb {
+  width: 100%;
+}/*# sourceMappingURL=sample.css.map */
