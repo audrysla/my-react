@@ -50,6 +50,7 @@ function Tabs(){
 
   return ( 
     <Container className='tabArea'>
+      <h2>React Tab Component</h2>
         <Ul ref={ulRef}>
           {Btns.map(({
             title
@@ -63,8 +64,8 @@ function Tabs(){
             />
           )}
         </Ul>
-        <h2>{Btns[tabIndex.current].title}</h2>
         <Thumb className='thumb' src={thumbImg} alt = "face"/>      
+        <h3>{Btns[tabIndex.current].title}</h3>
     </Container>
   )
 }
