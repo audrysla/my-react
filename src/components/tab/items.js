@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Li = styled.li``
 
-function Items({title, collectionCode, imgUrl, ev, index, tabActive}){  
+function Items({title, ev, index, tabActive}){  
   return ( 
     <Li>
       <a href="#none" 
