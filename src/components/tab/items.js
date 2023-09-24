@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const Li = styled.li``
 
-function Items({title, ev, index, tabActive}){  
+function Items({item, index, tabActive, clickEv}){  
   return ( 
     <Li>
-      <a href="#none" 
+      <a href="javascript:;" 
         className={index === tabActive ? 'on' : '' }
-        onClick={() => {ev(index)}} 
+        onClick={() => {clickEv(index)}} 
       >        
-        {index}. <span className='title'>{title}</span>
+        <span className='title'>{item.title}</span>
       </a>
     </Li>
   ) 
