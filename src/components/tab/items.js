@@ -6,12 +6,12 @@ const Li = styled.li``
 function Items({item, index, tabActive, clickEv}){  
   return ( 
     <Li>
-      <a href="javascript:;" 
+      <button 
         className={index === tabActive ? 'on' : '' }
         onClick={() => {clickEv(index)}} 
       >        
         <span className='title'>{item.title}</span>
-      </a>
+      </button>
     </Li>
   ) 
 }
