@@ -17,7 +17,9 @@ $color-blue:#118eff;
             h1{
                 width:250px;
                 font-size:26px;
-                color:rgb(95, 0, 128);
+                a{
+                    color:#002AFF;
+                }
             }
             .searchBox{
                 position:relative;

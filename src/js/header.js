@@ -19,7 +19,7 @@ function Header(){
           <Search/>
           <Util/>
         </SearchGroup>
-        <Nav/>
+        <Nav/> 
       </HeaderGroup>
     </Wrap>
   )
