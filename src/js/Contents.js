@@ -10,15 +10,27 @@ const ContentWrap = styled.div`
   margin:0 auto; 
 `;
 const Container = styled.div``
+const ProductList = styled.div`
+  padding:30px 0;
+`
+const H1 = styled.h1`
+  text-align:center;
+  font-size:25px;
+  margin-bottom:15px;
+`;
 
 function Contents(){
   return (
     <ContentWrap>
-      <div class="banner">손흥민 배경사진</div>
+      <div class="banner bn2">추석 선물</div>
       <Container className='container'>
         <SwiperComponent/>
         <Tab/>      
-      </Container>      
+      </Container>
+      <ProductList>
+        <H1>추천 상품</H1>
+        <div class="banner bn1">추석 선물</div>
+      </ProductList>
     </ContentWrap> 
   )
 }

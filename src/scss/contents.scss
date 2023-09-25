@@ -5,13 +5,19 @@
     min-height: 800px;
     .banner{
         height:120px;
-        font-size:0;
-        background: url(https://product-image.kurly.com/banner/main/pc/img/38707a8d-4029-4ca1-ac03-7b094d0b56fd.jpg) no-repeat 0 40%;
-        background-size:100% auto;
-
+        font-size:0;        
+        &.bn1{
+            background: url(https://product-image.kurly.com/banner/main/pc/img/38707a8d-4029-4ca1-ac03-7b094d0b56fd.jpg) no-repeat 0 40%;
+            background-size:100% auto;
+        }
+        &.bn2{
+            background: url(https://product-image.kurly.com/banner/main/pc/img/455b1459-41ac-4394-b2dc-bd6b329d2db7.jpg) no-repeat 0 50%;
+            background-size:100% auto;
+        }        
     }
+
     .container{
-        padding-top:30px;
+        padding:30px 0;
         display: flex;
         justify-content: space-between;
         #swiperId{
