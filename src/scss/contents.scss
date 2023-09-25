@@ -1,0 +1,29 @@
+#contents{
+    padding-bottom:50px;
+    position: relative;
+    z-index: 0;
+    min-height: 800px;
+    .banner{
+        height:120px;
+        font-size:0;
+        background: url(https://product-image.kurly.com/banner/main/pc/img/38707a8d-4029-4ca1-ac03-7b094d0b56fd.jpg) no-repeat 0 40%;
+        background-size:100% auto;
+
+    }
+    .container{
+        padding-top:30px;
+        display: flex;
+        justify-content: space-between;
+        #swiperId{
+            width:360px;
+            height:630px;
+            margin:0 !important;
+            .swiper-pagination-bullet{
+                &.swiper-pagination-bullet-active{
+                    background:#01aa4d;
+                }
+            }
+        }
+    }
+}
+

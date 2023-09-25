@@ -15,7 +15,7 @@ function Header(){
       <div className='bar'></div>    
       <HeaderGroup className='headerGroup'>      
         <SearchGroup className='searchGroup'>
-          <h1><a href="https://audrysla.github.io/my-react/">React Publishing</a></h1>
+          <h1><a href="https://audrysla.github.io/my-react/">React Sample</a></h1>
           <Search/>
           <Util/>
         </SearchGroup>

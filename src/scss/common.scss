@@ -3,6 +3,8 @@ $color-blue:#118eff;
 .bar{height:10px;background:$color-green;} 
 
 #header{
+    position: relative;
+    z-index: 1;
     padding-bottom:20px;
     box-shadow: 1px 1px 5px rgba(0,0,0, .3);       
     .headerGroup{     
@@ -112,12 +114,15 @@ $color-blue:#118eff;
         }    
     }    
 }
-#contents{
-    min-height: 800px;
-}
+
 footer{
-    width:1050px;margin:0 auto;
+    background:#333;
     padding:25px 0 50px 0;
-    font-size:12px;color:#333;
+    font-size:12px;color:#fff;
+    line-height: 18px;
+    .inner{
+        width:1050px;margin:0 auto;        
+    }
+    
 }
 

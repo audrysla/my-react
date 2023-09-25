@@ -1,10 +1,16 @@
 import React, {useState, useEffect, useRef} from 'react';
 import styled from "styled-components";
-import '../build-css/tab.css';
+import '../../build-css/tab.css';
 
-import Items from '../components/tab/items'
-import { Btns } from '../constants/TabBtns' 
+import Items from './items'
+import { Btns } from '../../constants/TabBtns' 
  
+const H1 = styled.h1`
+  text-align:center;
+  font-size:25px;
+  margin-bottom:15px;
+  text-transform: uppercase;
+`;
 // const Items = lazy(() => import('../components/tab/items'));
 // const { Btns } = lazy(() => import('../constants/btns'));
 
@@ -47,19 +53,19 @@ function Tabs(){
 
   return ( 
     <Container className='tabArea'>
-      <h2>React Tab Component</h2>
-        <Ul>
-          {Btns.map((item, index) => 
-            <Items
-              item={item}
-              index={index}
-              tabActive={tabIndex.current}
-              clickEv={TabClick}
-            />
-          )}
-        </Ul>
-        <Thumb className='thumb' src={thumbImg} alt="face"/>      
-        <h3>{Btns[tabIndex.current].title}</h3>
+      <H1>category BEST</H1>
+      <Ul>
+        {Btns.map((item, index) => 
+          <Items
+            item={item}
+            index={index}
+            tabActive={tabIndex.current}
+            clickEv={TabClick}
+          />
+        )}
+      </Ul>
+      <Thumb className='thumb' src={thumbImg} alt="face"/>      
+      <h3>{Btns[tabIndex.current].title}</h3>
     </Container>
   )
 }

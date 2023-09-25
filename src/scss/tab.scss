@@ -1,13 +1,17 @@
 .tabArea{
     display:inline-block;
-    padding:30px 10px;
+    // padding:30px 10px;
     max-width:500px;
     ul{
-        margin:10px 0;display:flex;flex-wrap: wrap;gap:10px;
+        display:flex;flex-wrap: wrap;gap:10px;
+        padding-bottom:10px;
         li{
             flex: 1 1 45%;text-align: center;
             button{
-                width:100%;cursor:pointer;border:1px solid;color:#333;font-size:1em;border-radius:100px;padding:10px 0;
+                width:100%;
+                cursor:pointer;border:1px solid;color:#333;
+                font-size:1em;border-radius:100px;padding:6px 0;
+                background:transparent;
                 &.on{background-color: gold;}
             }
         }
