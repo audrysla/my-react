@@ -8,7 +8,8 @@ $color-blue:#118eff;
     padding-bottom:20px;
     box-shadow: 1px 1px 5px rgba(0,0,0, .3);       
     .headerGroup{     
-        width:1050px;margin:0 auto;
+        max-width:1050px;
+        margin:0 auto;
         .searchGroup{            
             display: flex;
             justify-content: space-between;
@@ -124,7 +125,8 @@ footer{
     font-size:12px;color:#fff;
     line-height: 18px;
     .inner{
-        width:1050px;margin:0 auto;        
+        max-width:1050px;
+        margin:0 auto;        
     }
     
 }

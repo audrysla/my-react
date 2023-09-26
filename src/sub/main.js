@@ -18,7 +18,6 @@ const H1 = styled.h1`
 function Contents(){
   return (
     <div id="contents">
-      <div class="banner bn2">추석 선물</div>
       <Container className='container'>
         <SwiperComponent/>
         <Tab/>      
@@ -26,6 +25,7 @@ function Contents(){
       <ProductList>
         <H1>추천 상품 404</H1>
         <div class="banner bn1">추석 선물</div>
+        <div class="banner bn2">추석 선물</div>
       </ProductList>
     </div>
   )

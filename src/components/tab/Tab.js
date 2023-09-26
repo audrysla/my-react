@@ -56,6 +56,10 @@ function Tabs(){
   return ( 
     <Container className='tabArea'>
       <H1>category BEST</H1>
+      <Link to={`/productDetail/${result[tabIndex.current].id}`}>
+        <Thumb className='thumb' src={result[tabIndex.current].img} alt="face"/>
+        {/* <h3>{result[tabIndex.current].title}</h3> */}
+      </Link>
       <Ul>
         {result.map((item, index) => 
           <Items
@@ -66,10 +70,7 @@ function Tabs(){
           />
         )}
       </Ul>
-      <Link to={`/productDetail/${result[tabIndex.current].id}`}>
-        <Thumb className='thumb' src={result[tabIndex.current].img} alt="face"/>
-        <h3>{result[tabIndex.current].title}</h3>
-      </Link>
+      
     </Container>
   )
 }

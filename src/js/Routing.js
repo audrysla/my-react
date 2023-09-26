@@ -11,7 +11,7 @@ const Warp = styled.div`
 `;
 
 const SubLayout = styled.div`
-  width:1050px;
+  max-width:1050px;
   margin:0 auto;
   padding:50px 0;
 `;
@@ -20,16 +20,14 @@ function Routing(){
   return (
     <Warp>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Header/>
+        <Header/>          
+        <SubLayout>
           <Routes>
             <Route path='/' element={<Main/>} />
+            <Route path='/productDetail/:num' element={<ProductDetail/>} />
+            <Route path='/sub/:id' element={<SubPage/>} />
           </Routes>
-          <SubLayout>
-            <Routes>
-              <Route path='/productDetail/:num' element={<ProductDetail/>} />
-              <Route path='/sub/:id' element={<SubPage/>} />
-            </Routes>
-          </SubLayout>
+        </SubLayout>
       </BrowserRouter>
     </Warp>
   )

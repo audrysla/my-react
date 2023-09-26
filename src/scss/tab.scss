@@ -1,20 +1,31 @@
+$color:#dfdfdf;
 .tabArea{
     display:inline-block;
     // padding:30px 10px;
     max-width:500px;
     ul{
-        display:flex;flex-wrap: wrap;gap:10px;
-        padding-bottom:10px;
+        display:flex;flex-wrap: wrap;gap:0px;
         li{
-            flex: 1 1 45%;text-align: center;
+            flex: 1 1 48%;text-align: center;
+            margin-top: -1px;
+            &:nth-child(even){
+                margin-left: -1px;
+            }
             button{
-                width:100%;
-                cursor:pointer;border:1px solid;color:#333;
-                font-size:1em;border-radius:100px;padding:6px 0;
+                width:100%;border:0;
+                cursor:pointer;color:#333;
+                font-size:1em;padding:6px 0;
                 background:transparent;
-                &.on{background-color: gold;}
+                position:relative;
+                border:1px solid $color;
+                &.on{
+                    position:relative;z-index: 1;
+                    font-weight: bold;
+                    border:1px solid rgb(250, 98, 47);
+                    color:rgb(250, 98, 47);
+                }
             }
         }
     }
-    .thumb{width:100%;} 
+    .thumb{width:100%;vertical-align: top;} 
 }

@@ -1,5 +1,5 @@
 #contents{
-    width:1050px;
+    max-width:1050px;
     margin:0 auto; 
     padding-bottom:50px;
     position: relative;
@@ -7,7 +7,8 @@
     min-height: 800px;
     .banner{
         height:120px;
-        font-size:0;        
+        font-size:0;
+        & + .banner{margin-top:10px;}
         &.bn1{
             background: url(https://product-image.kurly.com/banner/main/pc/img/38707a8d-4029-4ca1-ac03-7b094d0b56fd.jpg) no-repeat 0 40%;
             background-size:100% auto;
@@ -19,7 +20,6 @@
     }
 
     .container{
-        padding:30px 0;
         display: flex;
         justify-content: center;
         gap:110px;
@@ -42,7 +42,8 @@
 .product_top{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start;    
+    
     ul{
         width:600px;
         li{
