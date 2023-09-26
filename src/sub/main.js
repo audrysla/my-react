@@ -24,7 +24,7 @@ function Contents(){
         <Tab/>      
       </Container>
       <ProductList>
-        <H1>추천 상품</H1>
+        <H1>추천 상품 404</H1>
         <div class="banner bn1">추석 선물</div>
       </ProductList>
     </div>
