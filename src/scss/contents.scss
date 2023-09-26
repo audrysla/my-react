@@ -39,3 +39,59 @@
     }
 }
 
+.product_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    ul{
+        width:600px;
+        li{
+            color:#333;
+            font-size:24px;
+            font-weight:bold;
+            &.type{
+                display: flex;
+                justify-content: space-between;
+                font-size:16px;
+                color:#7d7e80;
+                font-weight:normal;
+                padding-bottom:6px;
+                border-bottom:1px solid #ccc;;
+            }
+            &.title{
+                line-height:34px;
+                font-size:26px;
+                margin:25px 0;            
+            }
+            &.dimmedPrice{
+                margin-bottom:15px;
+                color: rgb(181, 181, 181);    
+                font-size:20px;
+                em{margin-right:5px;color:rgb(250, 98, 47);}
+                i{
+                    text-decoration: line-through;
+                    font-weight:normal
+                }
+            }
+            &.price{                
+                font-size:30px;
+            }
+        }
+    }
+    table{
+        margin-top:50px;
+        width:100%;
+        border-top: 1px solid #f0f2f5;
+        th,td{
+            border-bottom: 1px solid #f0f2f5;
+            font-size:16px
+        }
+        th{
+            font-weight:bold;width:120px;text-align:left;
+        }
+        td{
+            padding:20px 0;line-height: 28px;
+            
+        }
+    }
+}

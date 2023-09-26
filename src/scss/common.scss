@@ -49,7 +49,7 @@ $color-blue:#118eff;
             .util{
                 width:250px;
                 display: flex;
-                justify-content: end;
+                justify-content: flex-end;
                 gap:10px;
                 span{
                     position: relative;
@@ -97,7 +97,7 @@ $color-blue:#118eff;
             ul{
                 // &:after{content:'';display:block;clear:both;}
                 display:flex;
-                li{                    
+                li{
                     width:100px;
                     text-align: right;
                     // &+li{margin-left:20px;}

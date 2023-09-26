@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Products } from '../constants/Products'
@@ -37,8 +37,8 @@ const Price = styled.div`
   }
 `;
 
-export default () =>{
-  const result = Products.filter(list => list.type == 'today_best');
+function TodayBestSwiper(){
+  const result = Products.filter(list => list.type === 'today_best');
 
   return (
     <Wrap>
@@ -75,3 +75,4 @@ export default () =>{
     </Wrap>
   )
 }
+export default TodayBestSwiper;

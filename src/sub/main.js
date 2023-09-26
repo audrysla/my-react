@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Tab from '../components/tab/Tab';
-import SwiperComponent from '../components/swiperComponent';
+import SwiperComponent from '../components/TodayBestSwiper';
 import '../build-css/common.css';
 import '../build-css/contents.css';
 
