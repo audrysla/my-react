@@ -19,7 +19,7 @@ const SubLayout = styled.div`
 function Routing(){
   return (
     <Warp>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header/>
           <Routes>
             <Route path='/my-react' element={<Main/>} />
