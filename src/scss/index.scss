@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,7 +26,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -47,3 +48,4 @@ a {text-decoration: none; outline: none}
 a:hover, a:active {
     text-decoration: none;
 }
+h1, h2, h3, h4, h5, h6{font-weight:bold}
