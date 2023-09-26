@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Products } from '../constants/Products'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,15 +16,20 @@ const H1 = styled.h1`
   margin-bottom:15px;
 `;
 const Image = styled.img``;
-const ProductTitle = styled.div``;
+const ProductTitle = styled.div`
+  padding:10px 0;
+  line-height:22px;
+  color:#333;
+`;
 const DimmedPrice = styled.div`
   color: rgb(181, 181, 181);
   text-decoration: line-through;
   margin-top:10px;
 `;
 const Price = styled.div`
-  margin-top:5px;
+  margin-top:8px;
   font-weight:bold;
+  color:#333;
   em{
     margin-right:5px;
     font-style:normal;
@@ -31,6 +38,8 @@ const Price = styled.div`
 `;
 
 export default () =>{
+  const result = Products.filter(list => list.type == 'today_best');
+
   return (
     <Wrap>
       <H1>TODAY BEST</H1>      
@@ -49,42 +58,19 @@ export default () =>{
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         >
-        <SwiperSlide>
-          <Image src="https://img-cf.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/shop/data/goods/1650353599366l0.jpg"/>
-          <ProductTitle>[바나나] 탄력 3종 세트 (쇼핑백+쿠폰19760원+적립6612원)</ProductTitle>
-          <DimmedPrice>290,0000원</DimmedPrice>
-          <Price><em>20%</em>190,000원</Price>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="https://img-cf.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/shop/data/goods/1538466010000_l.jpg"/>
-          <ProductTitle>[바나나] 탄력 3종 세트 (쇼핑백+쿠폰19760원+적립6612원)</ProductTitle>
-          <DimmedPrice>290,0000원</DimmedPrice>
-          <Price><em>20%</em>190,000원</Price>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/23f60f00-fd03-42fb-a9a0-e1ebfab69c12.jpg"/>
-          <ProductTitle>[바나나] 탄력 3종 세트 (쇼핑백+쿠폰19760원+적립6612원)</ProductTitle>
-          <DimmedPrice>290,0000원</DimmedPrice>
-          <Price><em>20%</em>190,000원</Price>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/8a6350bf-a333-47e2-a4c0-38fe84371f37.jpg"/>
-          <ProductTitle>[바나나] 탄력 3종 세트 (쇼핑백+쿠폰19760원+적립6612원)</ProductTitle>
-          <DimmedPrice>290,0000원</DimmedPrice>
-          <Price><em>20%</em>190,000원</Price>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="https://3p-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/files/cc1ac6f0-81f6-473c-899d-edf544e3ea7a/ce1b6e83-1cda-472a-b17f-4c7c1aa11cfe.jpg"/>
-          <ProductTitle>[바나나] 탄력 3종 세트 (쇼핑백+쿠폰19760원+적립6612원)</ProductTitle>
-          <DimmedPrice>290,0000원</DimmedPrice>
-          <Price><em>20%</em>190,000원</Price>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/022b8205-dd18-4692-b13a-d362d91d93e5.jpg"/>
-          <ProductTitle>[바나나] 탄력 3종 세트 (쇼핑백+쿠폰19760원+적립6612원)</ProductTitle>
-          <DimmedPrice>290,0000원</DimmedPrice>
-          <Price><em>20%</em>190,000원</Price>
-        </SwiperSlide>
+        {
+          result.map((item, index) => (
+            <SwiperSlide>
+              <Link to={`/productDetail/${item.id}`} className='productInfo'>
+                <Image src={item.img}/>
+                <ProductTitle>{item.title}</ProductTitle>
+                <DimmedPrice>{item.dimmedPrice}</DimmedPrice>
+                <Price><em>{item.discount}</em>{item.price}</Price>
+              </Link>
+            </SwiperSlide>
+            )
+          )
+        }
       </Swiper>
     </Wrap>
   )

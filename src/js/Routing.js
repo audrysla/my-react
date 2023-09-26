@@ -17,7 +17,7 @@ function Routing(){
         <Header/>
         <Routes>
           <Route path='/my-react' element={<Main/>} />
-          <Route path='/productDetail' element={<ProductDetail/>} />
+          <Route path='/productDetail/:num' element={<ProductDetail/>} />
           <Route path='/sub/:id' element={<SubPage/>} />
         </Routes>
       </BrowserRouter>

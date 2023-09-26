@@ -1,9 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react';
 import styled from "styled-components";
 import '../../build-css/tab.css';
-
+import { Link } from "react-router-dom";
 import Items from './items'
-import { Btns } from '../../constants/TabBtns' 
+// import { Btns } from '../../constants/TabBtns'
+import { Products } from '../../constants/Products'
  
 const H1 = styled.h1`
   text-align:center;
@@ -19,8 +20,9 @@ const Ul = styled.ul``
 const Thumb = styled.img``
 
 function Tabs(){
-  const [thumbImg, setThumbImg] = useState(Btns[0].imgUrl)
-  const tabIndex = useRef(Math.floor(Math.random() * Btns.length))
+  const result = Products.filter(list => list.type == 'category_best');
+  const [thumbImg, setThumbImg] = useState(result[0].img)
+  const tabIndex = useRef(Math.floor(Math.random() * result.length))
   const timeLoop = useRef()
 
   // 버튼 클릭 시
@@ -32,7 +34,7 @@ function Tabs(){
   // 탭 변경
   const changes = (index) => {
     tabIndex.current = index         // 버튼 on 지정
-    setThumbImg(Btns[index].imgUrl)
+    setThumbImg(result[index].img)
   }
   
   useEffect(() => {
@@ -55,7 +57,7 @@ function Tabs(){
     <Container className='tabArea'>
       <H1>category BEST</H1>
       <Ul>
-        {Btns.map((item, index) => 
+        {result.map((item, index) => 
           <Items
             item={item}
             index={index}
@@ -64,8 +66,10 @@ function Tabs(){
           />
         )}
       </Ul>
-      <Thumb className='thumb' src={thumbImg} alt="face"/>      
-      <h3>{Btns[tabIndex.current].title}</h3>
+      <Link to={`/productDetail/${result[tabIndex.current].id}`}>
+        <Thumb className='thumb' src={result[tabIndex.current].img} alt="face"/>
+        <h3>{result[tabIndex.current].title}</h3>
+      </Link>
     </Container>
   )
 }
