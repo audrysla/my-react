@@ -5,10 +5,11 @@ import '../build-css/contents.css';
 import { Products } from '../constants/Products'
 import { useParams } from 'react-router-dom';
 
-export default () => {
+function ProductDetail(){
   const { num } = useParams();
-  const result = Products.filter(list => list.id == num);
+  const result = Products.filter(list => list.id === Number(num));
   const Wrap = styled.div``
+  const Images = styled.img``
   return ( 
     <>
       {/* <h1>상품 상세 페이지</h1> */}
@@ -17,7 +18,7 @@ export default () => {
           <>            
             <Wrap className='product_top'>
               <div className='thumb'>
-                <img src={item.img}/>                            
+                <Images src={item.img}/>                            
               </div>
               <div>
                 <ul>                
@@ -61,3 +62,4 @@ export default () => {
     </>
   )
 }
+export default ProductDetail;
