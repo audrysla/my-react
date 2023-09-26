@@ -22,7 +22,7 @@ function Routing(){
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header/>
           <Routes>
-            <Route path='/my-react' element={<Main/>} />
+            <Route path='/' element={<Main/>} />
           </Routes>
           <SubLayout>
             <Routes>
