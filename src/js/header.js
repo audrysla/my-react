@@ -5,23 +5,22 @@ import Util from '../components/util'
 import Nav from '../components/nav'
 import Search from '../components/Search'
 
-const Wrap = styled.div``;
 const HeaderGroup = styled.div``;
 const SearchGroup = styled.div``;
 
 function Header(){
   return (
-    <Wrap>
+    <div id="header">
       <div className='bar'></div>    
       <HeaderGroup className='headerGroup'>      
         <SearchGroup className='searchGroup'>
-          <h1><a href="https://audrysla.github.io/my-react/">React Sample</a></h1>
+          <h1><a href="/my-react/">React Sample</a></h1>
           <Search/>
           <Util/>
         </SearchGroup>
         <Nav/> 
       </HeaderGroup>
-    </Wrap>
+    </div>
   )
 }
 

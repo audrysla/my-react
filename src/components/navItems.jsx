@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Li = styled.li``;
 
 function Nav({item, index}){
   return (    
     <Li>
-        <a href="#">{item}({index})</a>
+        <Link to={`/sub/${index}`}>{item.title}({index})</Link>
     </Li>
   ) 
 }

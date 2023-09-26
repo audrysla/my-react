@@ -12,7 +12,10 @@ function Nav(){
         <Ul>
           {
             Items.map((item, index) =>
-              <NavItems item={item} index={index} />
+              <NavItems 
+                item={item}
+                index={index} 
+              />
             )
           }      
         </Ul>

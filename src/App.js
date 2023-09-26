@@ -1,9 +1,7 @@
-import React from 'react';
-
 function App(){
   return ( 
-    <div>
-      <h2>React On</h2>
+    <div className='App'>
+      <h1>메인 본문입니다.</h1>
     </div>
   )
 }
