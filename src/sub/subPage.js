@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import '../build-css/common.css';
 import { Items } from '../constants/constNav'
-export default (item) => {
+function SubPage(item){
   const { id } = useParams();
   console.log(useParams())
   return (
@@ -11,3 +11,4 @@ export default (item) => {
     </>
   )
 }
+export default SubPage

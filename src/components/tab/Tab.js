@@ -20,7 +20,7 @@ const Ul = styled.ul``
 const Thumb = styled.img``
 
 function Tabs(){
-  const result = Products.filter(list => list.type == 'category_best');
+  const result = Products.filter(list => list.type === 'category_best');
   const [thumbImg, setThumbImg] = useState(result[0].img)
   const tabIndex = useRef(Math.floor(Math.random() * result.length))
   const timeLoop = useRef()
