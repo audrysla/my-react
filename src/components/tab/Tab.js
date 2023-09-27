@@ -38,13 +38,14 @@ function Tabs(){
   }
   
   useEffect(() => {
-    const lis = document.querySelectorAll('.tabArea ul li');
+    // const lis = document.querySelectorAll('.tabArea ul li');
+    console.log(result.length)
     changes(tabIndex.current);
     
     // 탭 자동
     timeLoop.current = setInterval(() => {
-      tabIndex.current++
-      if(tabIndex.current > lis.length-1) tabIndex.current = 0;
+      tabIndex.current++      
+      if(tabIndex.current > result.length-1) tabIndex.current = 0;
       changes(tabIndex.current);
     }, 3000);
 
