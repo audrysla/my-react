@@ -4,6 +4,11 @@ import NavItems from './navItems'
 import { Items } from '../constants/constNav'
 
 const Ul = styled.ul``;
+const Lotte = styled.a`
+  width:100px;
+  height:26px;
+  background:url('//img3.tmon.kr/cdn4/pc/header/i_lotte.svg') no-repeat 0 0;
+`;
 
 function Nav(){
   return ( 
@@ -19,6 +24,7 @@ function Nav(){
             )
           }      
         </Ul>
+        <Lotte href="#"/>
     </nav>
   ) 
 }
