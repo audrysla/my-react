@@ -35,37 +35,6 @@
         }
     }
 }
-.itemProduct{
-    display: block;
-    overflow: hidden;
-    .thumb-tag{
-        overflow: hidden;
-        width:360px;
-        height:468px;
-        img{vertical-align: top;}
-    }
-    .title-tag{
-        padding:10px 0;
-        line-height:22px;
-        color:#333;
-    }
-    .dimmedPrice-tag{
-        color: rgb(181, 181, 181);
-        text-decoration: line-through;
-        margin-top:10px;
-    }
-    .price-tag{
-        margin-top:8px;
-        font-weight:bold;
-        color:#333;
-        em{
-            margin-right:5px;
-            font-style:normal;
-            color:rgb(250, 98, 47)
-        }
-    }
-    a{color:#333}
-}
 .product_top{
     display: flex;
     justify-content: space-between;
@@ -123,18 +92,57 @@
         }
     }
 }
+.itemProduct{
+    display: block;
+    overflow: hidden;
+    .thumb-tag{
+        overflow: hidden;
+        width:360px;
+        height:468px;
+        img{
+            width:100%;
+            vertical-align: top;
+        }
+    }
+    .title-tag{
+        margin:10px 0;
+        line-height:22px;
+        color:#333;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .dimmedPrice-tag{
+        margin-top:15px;
+        color: rgb(181, 181, 181);
+        text-decoration: line-through;
+    }
+    .price-tag{
+        margin-top:8px;
+        font-weight:bold;
+        color:#333;
+        em{
+            margin-right:5px;
+            font-style:normal;
+            color:rgb(250, 98, 47)
+        }
+    }
+    a{color:#333}
+}
 .listA{
     display: flex;
     flex-wrap: wrap;
     gap:10px;
     li{
         flex:1 1 20%;
-        max-width: 255px;
-        height:500px;
+        padding-bottom:50px;        
+        max-width:255px;
         .thumb-tag{
+            width:255px;      
             height:331.5px;
             img{
-                width:100%;
                 transition:transform .3s;
             }
             &:hover{
