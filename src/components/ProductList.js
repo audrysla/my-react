@@ -7,13 +7,13 @@ import '../build-css/contents.css';
 import ItemSkeleton from './ItemSkeleton'
 const ItemProduct = lazy(() => import('./ItemTypeA'));
 
+const Li = styled.li``;
 const Wrap = styled.div``
 const Title = styled.h3`
   font-size:20px;
   text-align:center;
   margin-bottom:15px;
 `
-
 function Contents(){
 
   return (
@@ -21,11 +21,11 @@ function Contents(){
       <Title>전체 상품리스트</Title>
       <ul className='listA'>
         {Products.map((item) => (
-          <li>
+          <Li>
             <Suspense fallback={<ItemSkeleton/>}>
               <ItemProduct item={item}/>
             </Suspense>
-          </li>
+          </Li>
         ))}
       </ul>
     </Wrap>
