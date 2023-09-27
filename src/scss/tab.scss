@@ -2,7 +2,7 @@ $color:#dfdfdf;
 .tabArea{
     display:inline-block;
     // padding:30px 10px;
-    max-width:500px;
+    width:360px;
     ul{
         display:flex;flex-wrap: wrap;gap:0px;
         li{
@@ -27,5 +27,7 @@ $color:#dfdfdf;
             }
         }
     }
-    .thumb{width:100%;vertical-align: top;} 
+    .thumb{
+        vertical-align: top;
+    } 
 }

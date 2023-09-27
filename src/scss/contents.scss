@@ -31,14 +31,37 @@
                 &.swiper-pagination-bullet-active{
                     background:#01aa4d;
                 }
-            }
-            .productInfo{
-                a{color:#333}
-            }
+            }            
         }
     }
 }
-
+.itemProduct{
+    .thumb-tag{
+        overflow: hidden;;
+        img{vertical-align: top;}
+    }
+    .title-tag{
+        padding:10px 0;
+        line-height:22px;
+        color:#333;
+    }
+    .dimmedPrice-tag{
+        color: rgb(181, 181, 181);
+        text-decoration: line-through;
+        margin-top:10px;
+    }
+    .price-tag{
+        margin-top:8px;
+        font-weight:bold;
+        color:#333;
+        em{
+            margin-right:5px;
+            font-style:normal;
+            color:rgb(250, 98, 47)
+        }
+    }
+    a{color:#333}
+}
 .product_top{
     display: flex;
     justify-content: space-between;
@@ -93,6 +116,25 @@
         td{
             padding:20px 0;line-height: 28px;
             
+        }
+    }
+}
+.listA{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    li{
+        flex:1 1 20%;
+        max-width: 255px;
+        padding-bottom:35px;
+        .thumb-tag{            
+            img{
+                width:100%;
+                transition:transform .3s;
+            }
+            &:hover{
+                img{transform: scale(1.03);}
+            }
         }
     }
 }

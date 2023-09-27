@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { Products } from '../constants/Products'
+import ItemProduct from './ItemTypeA';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,26 +16,29 @@ const H1 = styled.h1`
   margin-bottom:15px;
 `;
 const Image = styled.img``;
-const ProductTitle = styled.div`
-  padding:10px 0;
-  line-height:22px;
-  color:#333;
-`;
-const DimmedPrice = styled.div`
-  color: rgb(181, 181, 181);
-  text-decoration: line-through;
-  margin-top:10px;
-`;
-const Price = styled.div`
-  margin-top:8px;
-  font-weight:bold;
-  color:#333;
-  em{
-    margin-right:5px;
-    font-style:normal;
-    color:rgb(250, 98, 47)
-  }
-`;
+// const ProductTitle = styled.div`
+//   padding:10px 0;
+//   line-height:22px;
+//   color:#333;
+// `;
+// const DimmedPrice = styled.div`
+//   color: rgb(181, 181, 181);
+//   text-decoration: line-through;
+//   margin-top:10px;
+// `;
+// const Price = styled.div`
+//   margin-top:8px;
+//   font-weight:bold;
+//   color:#333;
+//   em{
+//     margin-right:5px;
+//     font-style:normal;
+//     color:rgb(250, 98, 47)
+//   }
+// `;
+const Tag = styled.span`
+  display:block;
+`
 
 function TodayBestSwiper(){
   const result = Products.filter(list => list.type === 'today_best');
@@ -61,15 +64,9 @@ function TodayBestSwiper(){
         {
           result.map((item, index) => (
             <SwiperSlide>
-              <Link to={`/productDetail/${item.id}`} className='productInfo'>
-                <Image src={item.img}/>
-                <ProductTitle>{item.title}</ProductTitle>
-                <DimmedPrice>{item.dimmedPrice}</DimmedPrice>
-                <Price><em>{item.discount}</em>{item.price}</Price>
-              </Link>
+              <ItemProduct item={item}/>
             </SwiperSlide>
-            )
-          )
+          ))
         }
       </Swiper>
     </Wrap>

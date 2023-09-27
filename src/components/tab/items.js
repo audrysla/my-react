@@ -10,7 +10,7 @@ function Items({item, index, tabActive, clickEv}){
         className={index === tabActive ? 'on' : '' }
         onClick={() => {clickEv(index)}} 
       >        
-        <span className='title'>{item.title}</span>
+        <span className='title'>{item.cate}</span>
       </button>
     </Li>
   ) 

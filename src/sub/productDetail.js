@@ -18,15 +18,15 @@ function ProductDetail(){
           <>            
             <Wrap className='product_top'>
               <div className='thumb'>
-                <Images src={item.img}/>                            
+                <Images src={item.img}/>
               </div>
               <div>
                 <ul>                
                   <li className='type'>
-                    <em>{item.type}</em>
+                    <em>{item.cate}</em>
                     <em>상품번호 : {item.id}</em>
                   </li>
-                  <li className='title'>{item.title}</li>               
+                  <li className='title'>{item.title}</li>
                   <li className='dimmedPrice'>
                     <em>{item.discount}</em>
                     <i>{item.dimmedPrice}</i>

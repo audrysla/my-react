@@ -2,13 +2,15 @@ import React from 'react';
 import styled from "styled-components";
 import Tab from '../components/tab/Tab';
 import SwiperComponent from '../components/TodayBestSwiper';
+import ProductList from '../components/ProductList';
+
 import '../build-css/common.css';
 import '../build-css/contents.css';
 
 const Container = styled.div``
-const ProductList = styled.div`
-  padding:30px 0;
-`
+const MainProduct = styled.div`
+  padding:30px 0;`
+// const ProductList = styled.div``
 const H1 = styled.h1`
   text-align:center;
   font-size:25px;
@@ -22,11 +24,12 @@ function Contents(){
         <SwiperComponent/>
         <Tab/>      
       </Container>
-      <ProductList>
+      <MainProduct>
         <H1>추천 상품 404</H1>
         <div class="banner bn1">추석 선물</div>
-        <div class="banner bn2">추석 선물</div>
-      </ProductList>
+      </MainProduct> 
+      <ProductList />
+      <div class="banner bn2">추석 선물</div>
     </div>
   )
 }

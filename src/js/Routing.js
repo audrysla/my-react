@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styled from "styled-components";
-import Main from '../sub/main';
+import Main from '../js/main';
 import ProductDetail from '../sub/productDetail';
 import SubPage from '../sub/subPage';
 import Header from './header';
