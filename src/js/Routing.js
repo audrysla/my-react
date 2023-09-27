@@ -16,7 +16,16 @@ const SubLayout = styled.div`
   padding:50px 0;
 `;
 
+const GoTop = styled.a``
+
 function Routing(){
+  window.addEventListener('scroll', function(e){   
+    const gotop = document.querySelector(".goTop"); 
+    (window.scrollY > 500) ? gotop.classList.add("show") : gotop.classList.remove("show");
+    gotop.addEventListener('click', () =>{
+      window.scrollTo({top:0, behavior: "smooth"})
+    });
+  });
   return (
     <Warp>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -29,6 +38,7 @@ function Routing(){
           </Routes>
         </SubLayout>
       </BrowserRouter>
+      <GoTop href="javascript:void(0)" className="goTop"/>
     </Warp>
   )
 }
