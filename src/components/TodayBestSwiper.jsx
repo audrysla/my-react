@@ -1,13 +1,17 @@
+import React, { lazy, Suspense } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import styled from "styled-components";
 import { Products } from '../constants/Products'
-import ItemProduct from './ItemTypeA';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+
+// import ItemProduct from './ItemTypeA';
+import ItemSkeleton from './ItemSkeleton'
+const ItemProduct = lazy(() => import('./ItemTypeA'));
 
 const Wrap = styled.div``;
 const H1 = styled.h1`
@@ -43,32 +47,34 @@ const Tag = styled.span`
 function TodayBestSwiper(){
   const result = Products.filter(list => list.type === 'today_best');
 
-  return (
+  return (    
     <Wrap>
-      <H1>TODAY BEST</H1>      
-      <Swiper id="swiperId"
-        modules={[Autoplay, Navigation, Pagination]}
-        spaceBetween={15}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{ 
-          delay: 3000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        // navigation {/*좌우 버튼*/}
-        pagination={{ clickable: true }}        
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-        >
-        {
-          result.map((item, index) => (
-            <SwiperSlide>
-              <ItemProduct item={item}/>
-            </SwiperSlide>
-          ))
-        }
-      </Swiper>
+      <H1>TODAY BEST</H1>
+      <Suspense fallback={<ItemSkeleton/>}>
+        <Swiper id="swiperId"
+          modules={[Autoplay, Navigation, Pagination]}
+          spaceBetween={15}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ 
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          // navigation {/*좌우 버튼*/}
+          pagination={{ clickable: true }}        
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+          >
+          {
+            result.map((item, index) => (
+              <SwiperSlide>              
+                <ItemProduct item={item}/>
+              </SwiperSlide>
+            ))
+          }
+        </Swiper>
+      </Suspense>
     </Wrap>
   )
 }

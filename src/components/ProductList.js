@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import styled from "styled-components";
 import { Products } from '../constants/Products'
-import ItemProduct from './ItemTypeA';
 import '../build-css/common.css';
 import '../build-css/contents.css';
+// import ItemProduct from './ItemTypeA';
+import ItemSkeleton from './ItemSkeleton'
+const ItemProduct = lazy(() => import('./ItemTypeA'));
 
 const Wrap = styled.div``
 const Title = styled.h3`
@@ -13,13 +15,16 @@ const Title = styled.h3`
 `
 
 function Contents(){
+
   return (
     <Wrap>
       <Title>전체 상품리스트</Title>
       <ul className='listA'>
         {Products.map((item) => (
           <li>
-            <ItemProduct item={item}/>
+            <Suspense fallback={<ItemSkeleton/>}>
+              <ItemProduct item={item}/>
+            </Suspense>
           </li>
         ))}
       </ul>

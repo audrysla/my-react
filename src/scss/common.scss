@@ -132,3 +132,32 @@ footer{
     
 }
 
+.loader {
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:22px;
+}
+.loader:after{content:'Loading...';margin-left:20px;}
+.loader:before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #807d7d;
+    border-color: #807d7d transparent #807d7d transparent;
+    animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

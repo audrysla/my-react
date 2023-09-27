@@ -1,19 +1,19 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, lazy, Suspense} from 'react';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import styled from "styled-components";
 import '../../build-css/tab.css';
 import { Link } from "react-router-dom";
-import Items from './items'
-// import { Btns } from '../../constants/TabBtns'
 import { Products } from '../../constants/Products'
- 
+// import Items from './items'
+const Items = lazy(() => import('./items'));
+
 const H1 = styled.h1`
   text-align:center;
   font-size:25px;
   margin-bottom:15px;
   text-transform: uppercase;
 `;
-// const Items = lazy(() => import('../components/tab/items'));
-// const { Btns } = lazy(() => import('../constants/btns'));
 
 const Container = styled.div``
 const Ul = styled.ul``
@@ -59,18 +59,19 @@ function Tabs(){
       <Link to={`/productDetail/${result[tabIndex.current].id}`}>
         <Thumb className='thumb' src={result[tabIndex.current].img} alt="face"/>
         {/* <h3>{result[tabIndex.current].title}</h3> */}
-      </Link>
-      <Ul>
-        {result.map((item, index) => 
-          <Items
-            item={item}
-            index={index}
-            tabActive={tabIndex.current}
-            clickEv={TabClick}
-          />
-        )}
-      </Ul>
-      
+      </Link>      
+      <Suspense fallback={<Skeleton height={100} />}>
+        <Ul>
+          {result.map((item, index) => 
+              <Items
+                item={item}
+                index={index}
+                tabActive={tabIndex.current}
+                clickEv={TabClick}
+              />
+              )}
+        </Ul>
+      </Suspense>
     </Container>
   )
 }

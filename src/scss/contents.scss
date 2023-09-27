@@ -36,8 +36,12 @@
     }
 }
 .itemProduct{
+    display: block;
+    overflow: hidden;
     .thumb-tag{
-        overflow: hidden;;
+        overflow: hidden;
+        width:360px;
+        height:468px;
         img{vertical-align: top;}
     }
     .title-tag{
@@ -126,8 +130,9 @@
     li{
         flex:1 1 20%;
         max-width: 255px;
-        padding-bottom:35px;
-        .thumb-tag{            
+        height:500px;
+        .thumb-tag{
+            height:331.5px;
             img{
                 width:100%;
                 transition:transform .3s;
@@ -137,4 +142,8 @@
             }
         }
     }
+}
+
+.react-loading-skeleton{
+    height:100%;
 }

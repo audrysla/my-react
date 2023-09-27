@@ -1,5 +1,6 @@
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import { Link } from "react-router-dom";
-import { Products } from '../constants/Products'
 import styled from "styled-components";
 // Import Swiper styles
 import 'swiper/css';
@@ -14,7 +15,7 @@ const Tag = styled.span`
 
 function ItemTypeA({item}){
   return (
-    <>      
+    <>
       <Link to={`/productDetail/${item.id}`} className='itemProduct'>
         <Tag className='thumb-tag'><Image src={item.img}/></Tag>
         <Tag className='title-tag'>{item.title}</Tag>
