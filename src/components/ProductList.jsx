@@ -21,7 +21,7 @@ function Contents(){
       <Title>전체 상품리스트</Title>
       <ul className='listA'>
         {Products.map((item) => (
-          <Li>
+          <Li key={item.id}>
             <Suspense fallback={<ItemSkeleton/>}>
               <ItemProduct item={item}/>
             </Suspense>

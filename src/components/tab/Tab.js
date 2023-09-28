@@ -39,7 +39,7 @@ function Tabs(){
   
   useEffect(() => {
     // const lis = document.querySelectorAll('.tabArea ul li');
-    console.log(result.length)
+    // console.log(result.length)
     changes(tabIndex.current);
     
     // 탭 자동
@@ -65,6 +65,7 @@ function Tabs(){
         <Ul>
           {result.map((item, index) => 
               <Items
+                key={item.id}
                 item={item}
                 index={index}
                 tabActive={tabIndex.current}

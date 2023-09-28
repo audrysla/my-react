@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {useMediaQuery} from 'react-responsive';
 import styled from "styled-components";
 import Main from '../js/main';
-import ProductDetail from '../sub/productDetail';
-import SubPage from '../sub/subPage';
 import Header from './header';
+import SubPage from '../sub/subPage';
+import ProductDetail from '../sub/productDetail';
+import Footer from './Footer';
 
 const Warp = styled.div`
   min-height:500px;
@@ -18,6 +20,22 @@ const SubLayout = styled.div`
 
 const GoTop = styled.a``
 
+export const Mobile = ({children}) => {
+  const isMobile = useMediaQuery({
+    query : "(max-width:768px)"
+  });
+  
+  return <>{isMobile && children}</>
+}
+
+export const PC = ({children}) => {
+  const isPc = useMediaQuery({
+    query : "(min-width:769px)"
+  });
+  
+  return <>{isPc && children}</>
+}
+
 function Routing(){
   window.addEventListener('scroll', function(e){   
     const gotop = document.querySelector(".goTop"); 
@@ -28,6 +46,8 @@ function Routing(){
   });
   return (
     <Warp>
+      {/* <Mobile> mobile </Mobile>
+    	<PC> pc </PC> */}
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header/>          
         <SubLayout>
@@ -37,8 +57,9 @@ function Routing(){
             <Route path='/sub/:id' element={<SubPage/>} />
           </Routes>
         </SubLayout>
+        <Footer/>
       </BrowserRouter>
-      <GoTop href="javascript:void(0)" className="goTop"/>
+      <GoTop href="#none" className="goTop"/>
     </Warp>
   )
 }

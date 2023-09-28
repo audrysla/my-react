@@ -26,10 +26,10 @@ function Contents(){
       </Container>
       <MainProduct>
         <H1>추천 상품 404</H1>
-        <div class="banner bn1">추석 선물</div>
+        <div className="banner bn1">추석 선물</div>
       </MainProduct> 
       <ProductList />
-      <div class="banner bn2">추석 선물</div>
+      <div className="banner bn2">추석 선물</div>
     </div>
   )
 }

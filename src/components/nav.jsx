@@ -18,6 +18,7 @@ function Nav(){
           {
             Items.map((item, index) =>
               <NavItems 
+                key={item.id}
                 item={item}
                 index={index} 
               />

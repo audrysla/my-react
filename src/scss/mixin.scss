@@ -1,11 +1,1 @@
-@import "./_variables.scss";
-
-/*반응형, 브라우저 크기가 767px 이하일때*/
-@mixin mobile{
-    @media (min-width: #{$mobile})
-        and (min-width: #{$tablet - 1px}){
-        .product_top{
-            background:#ddd;
-        }
-    }
-}
+// mixin 모음

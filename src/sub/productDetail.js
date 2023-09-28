@@ -10,55 +10,54 @@ function ProductDetail(){
   const result = Products.filter(list => list.id === Number(num));
   const Wrap = styled.div``
   const Images = styled.img``
+  // console.log(result)
   return ( 
     <>
-      {/* <h1>상품 상세 페이지</h1> */}
-      {
-        result.map((item) => (
-          <>            
-            <Wrap className='product_top'>
-              <div className='thumb'>
-                <Images src={item.img}/>
-              </div>
-              <div>
-                <ul>                
-                  <li className='type'>
-                    <em>{item.cate}</em>
-                    <em>상품번호 : {item.id}</em>
-                  </li>
-                  <li className='title'>{item.title}</li>
-                  <li className='dimmedPrice'>
-                    <em>{item.discount}</em>
-                    <i>{item.dimmedPrice}</i>
-                  </li>               
-                  <li className='price'>{item.price}</li>
-                </ul>
-                <table>
-                  <tr>
-                    <th>쿠폰할인</th>
-                    <td>10% 할인쿠폰 받기</td>
-                  </tr>
-                  <tr>
-                    <th>결제혜택</th>
-                    <td>
-                      현대M포인트 5% 사용 가능<br/>
-                      최대 6개월 무이자
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>배송정보</th>
-                    <td>
-                      해외 직배송<br/>
-                      무료배송<br/>
-                      10/18(수) 이내 도착 예정배송 정보
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </Wrap>
-          </>
-        )) 
-      }
+      <Wrap className='product_top'>
+        <div className='thumb'>
+          <Images src={result[0].img}/>
+        </div>
+        <div>
+          <ul>                
+            <li className='type'>
+              <em>{result[0].cate}</em>
+              <em>상품번호 : {result[0].id}</em>
+            </li>
+            <li className='title'>{result[0].title}</li>
+            <li className='dimmedPrice'>
+              <em>{result[0].discount}</em>
+              <i>{result[0].dimmedPrice}</i>
+            </li>               
+            <li className='price'>{result[0].price}</li>
+          </ul>
+          <table>
+            <thead>
+              <tr><td>테이블 정보</td></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>쿠폰할인</th>
+                <td>10% 할인쿠폰 받기</td>
+              </tr>
+              <tr>
+                <th>결제혜택</th>
+                <td>
+                  현대M포인트 5% 사용 가능<br/>
+                  최대 6개월 무이자
+                </td>
+              </tr>
+              <tr>
+                <th>배송정보</th>
+                <td>
+                  해외 직배송<br/>
+                  무료배송<br/>
+                  10/18(수) 이내 도착 예정배송 정보
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </Wrap>
     </>
   )
 }

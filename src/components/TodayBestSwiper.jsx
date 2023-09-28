@@ -19,7 +19,7 @@ const H1 = styled.h1`
   font-size:25px;
   margin-bottom:15px;
 `;
-const Image = styled.img``;
+// const Image = styled.img``;
 // const ProductTitle = styled.div`
 //   padding:10px 0;
 //   line-height:22px;
@@ -40,9 +40,9 @@ const Image = styled.img``;
 //     color:rgb(250, 98, 47)
 //   }
 // `;
-const Tag = styled.span`
-  display:block;
-`
+// const Tag = styled.span`
+//   display:block;
+// `
 
 function TodayBestSwiper(){
   const result = Products.filter(list => list.type === 'today_best');
@@ -63,13 +63,13 @@ function TodayBestSwiper(){
           }}
           // navigation {/*좌우 버튼*/}
           pagination={{ clickable: true }}        
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log('slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
           >
           {
-            result.map((item, index) => (
-              <SwiperSlide>              
-                <ItemProduct item={item}/>
+            result.map((item) => (
+              <SwiperSlide key={item.id}>              
+                <ItemProduct item={item} />
               </SwiperSlide>
             ))
           }

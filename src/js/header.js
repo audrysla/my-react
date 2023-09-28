@@ -10,7 +10,7 @@ const SearchGroup = styled.div``;
 
 function Header(){
   return (
-    <div id="header">
+    <div id="header">      
       <div className='bar'></div>    
       <HeaderGroup className='headerGroup'>      
         <SearchGroup className='searchGroup'>
