@@ -17,7 +17,7 @@ function ItemTypeA({item}){
   return (
     <>
       <Link to={`/productDetail/${item.id}`} className='itemProduct'>
-        <Tag className='thumb-tag'><Image src={item.img}/></Tag>
+        <Tag className='thumb-tag'><Image src={item.img} /></Tag>
         <Tag className='title-tag'>{item.title}</Tag>
         <Tag className='dimmedPrice-tag'>{item.dimmedPrice}</Tag>
         <Tag className='price-tag'><em>{item.discount}</em>{item.price}</Tag>

@@ -12,9 +12,7 @@ const Warp = styled.div`
   min-height:500px;
 `;
 
-const SubLayout = styled.div`
-  
-`;
+const SubLayout = styled.div``;
 
 const GoTop = styled.a``
 

@@ -15,7 +15,6 @@ const Title = styled.h3`
   margin-bottom:15px;
 `
 function Contents(){
-
   return (
     <Wrap>
       <Title>전체 상품리스트</Title>

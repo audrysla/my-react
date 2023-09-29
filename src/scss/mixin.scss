@@ -52,6 +52,8 @@ $win-size : $pc-size;
                 margin:0 auto;
                 width:$win-size;
                 nav{
+                    position:sticky;
+                    top:0;
                     padding:15px 0;
                     border-top:1px solid #ddd;
                     overflow: hidden;
@@ -99,12 +101,20 @@ $win-size : $pc-size;
             li{
                 flex:1 1 40%;
                 padding-bottom:50px;        
-                max-width:auto;
+                max-width:unset;
                 .thumb-tag{
                     width:auto;
                     height:auto;
+                    display: block;
+                    position: relative;
+                    padding-top: 129%;
                     img{
                         transition:unset;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
                     }
                     &:hover{
                         img{transform: unset}
@@ -117,7 +127,9 @@ $win-size : $pc-size;
             display: block;
             .thumb{
                 width:auto;
-                img{width:100%;vertical-align: top;}
+                img{
+                    width:100%;vertical-align: top;
+                }
                 &+div{padding:10px;}
             } 
             ul{width:auto;}
