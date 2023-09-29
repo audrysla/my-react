@@ -7,8 +7,7 @@ import styled from "styled-components";
 const Tag = styled.span`
   display:block;
 `
-function ItemSkeleton({i}){
-
+function ItemSkeleton({}){
   return (
     <>      
       <Link className='itemProduct'>

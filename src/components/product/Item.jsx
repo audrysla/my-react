@@ -13,7 +13,7 @@ const Tag = styled.span`
   display:block;
 `
 
-function ItemTypeA({item}){
+function PoductItem({item}){
   return (
     <>
       <Link to={`/productDetail/${item.id}`} className='itemProduct'>
@@ -25,4 +25,4 @@ function ItemTypeA({item}){
     </>
   )
 }
-export default ItemTypeA;
+export default PoductItem;

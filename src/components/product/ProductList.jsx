@@ -1,12 +1,11 @@
 import React, { lazy, Suspense } from 'react';
 import styled from "styled-components";
 import { Products } from '../../constants/Products'
+import ItemSkeleton from './ItemSkeleton'
 import '../../build-css/common.css';
 import '../../build-css/contents.css';
-// import ItemProduct from './ItemTypeA';
-import ItemSkeleton from './ItemSkeleton'
-const ItemProduct = lazy(() => import('./ItemTypeA'));
 
+const PoductItem = lazy(() => import('./Item'));
 const Wrap = styled.div`padding-top:30px;`
 const Li = styled.li``;
 const Title = styled.h3`
@@ -22,7 +21,7 @@ function Contents(){
         {Products.map((item) => (
           <Li key={item.id}>
             <Suspense fallback={<ItemSkeleton/>}>
-              <ItemProduct item={item}/>
+              <PoductItem item={item}/>
             </Suspense>
           </Li>
         ))}

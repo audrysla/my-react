@@ -3,6 +3,7 @@ $pc-size : 1050px;
 $mo-size : 768px;
 $win-size : $pc-size;
 
+.react-loading-skeleton{height:100%;}
 @mixin mobile {
     @media (max-width: $mo-size){
         @content;
@@ -103,18 +104,19 @@ $win-size : $pc-size;
                 padding-bottom:50px;        
                 max-width:unset;
                 .thumb-tag{
-                    width:auto;
-                    height:auto;
+                    width:auto;                    
+                    height:(468px / 790px) * 100vw;
                     display: block;
-                    position: relative;
-                    padding-top: 129%;
+                    // position: relative;
+                    // padding-top: 129%;                    
                     img{
                         transition:unset;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
+                        border-radius: 5px;
+                        // position: absolute;
+                        // top: 0;
+                        // left: 0;
+                        // right: 0;
+                        // bottom: 0;
                     }
                     &:hover{
                         img{transform: unset}

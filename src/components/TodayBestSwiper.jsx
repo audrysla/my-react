@@ -10,8 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-// import ItemProduct from './ItemTypeA';
-const ItemProduct = lazy(() => import('./product/ItemTypeA'));
+const ItemProduct = lazy(() => import('./product/Item'));
 
 const Wrap = styled.div``;
 const H1 = styled.h1`
