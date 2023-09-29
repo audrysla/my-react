@@ -99,7 +99,7 @@ $win-size : $pc-size;
             li{
                 flex:1 1 40%;
                 padding-bottom:50px;        
-                // max-width:255px;
+                max-width:auto;
                 .thumb-tag{
                     width:auto;
                     height:auto;
