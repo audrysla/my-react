@@ -1,10 +1,7 @@
-#contents{
-    margin:0 auto; 
-    min-width:1050px;
-    min-height: 800px;
-    padding-bottom:50px;
-    position: relative;
+#contents{    
     z-index: 0;
+    position: relative;
+    padding-bottom:50px;
     .banner{
         height:120px;
         font-size:0;
@@ -165,6 +162,8 @@
     &.show{
         bottom:50px;
     }
+
+
 }
 .react-loading-skeleton{
     height:100%;

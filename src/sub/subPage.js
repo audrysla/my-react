@@ -1,14 +1,18 @@
 import React from 'react';
+import styled from "styled-components";
+import { Items } from '../constants/constNav'
 import { useParams } from 'react-router-dom';
 import '../build-css/common.css';
-import { Items } from '../constants/constNav'
 function SubPage(item){
   const { id } = useParams();
-  console.log(useParams())
+  // console.log(useParams())
+  const Warp = styled.div`
+    padding:30px 10px;
+  `;
   return (
-    <>
+    <Warp>
       <h2>{id} {Items[id].title} 페이지 입니다.</h2>
-    </>
+    </Warp>
   )
 }
 export default SubPage

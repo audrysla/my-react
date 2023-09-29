@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {useMediaQuery} from 'react-responsive';
 import styled from "styled-components";
 import Main from '../js/main';
 import Header from './header';
 import SubPage from '../sub/subPage';
-import ProductDetail from '../sub/productDetail';
+import ProductDetail from '../components/product/productDetail';
 import Footer from './Footer';
 
 const Warp = styled.div`
@@ -13,28 +12,10 @@ const Warp = styled.div`
 `;
 
 const SubLayout = styled.div`
-  max-width:1050px;
-  margin:0 auto;
-  padding:50px 0;
+  
 `;
 
 const GoTop = styled.a``
-
-export const Mobile = ({children}) => {
-  const isMobile = useMediaQuery({
-    query : "(max-width:768px)"
-  });
-  
-  return <>{isMobile && children}</>
-}
-
-export const PC = ({children}) => {
-  const isPc = useMediaQuery({
-    query : "(min-width:769px)"
-  });
-  
-  return <>{isPc && children}</>
-}
 
 function Routing(){
   window.addEventListener('scroll', function(e){   
@@ -45,12 +26,10 @@ function Routing(){
     });
   });
   return (
-    <Warp>
-      {/* <Mobile> mobile </Mobile>
-    	<PC> pc </PC> */}
+    <Warp>      
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header/>          
-        <SubLayout>
+        <SubLayout className='subLayout'>
           <Routes>
             <Route path='/' element={<Main/>} />
             <Route path='/productDetail/:num' element={<ProductDetail/>} />

@@ -1,8 +1,9 @@
 import React, { lazy, Suspense } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import styled from "styled-components";
 import { Products } from '../constants/Products'
+import styled from "styled-components";
+import ItemSkeleton from './product/ItemSkeleton'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,8 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 // import ItemProduct from './ItemTypeA';
-import ItemSkeleton from './ItemSkeleton'
-const ItemProduct = lazy(() => import('./ItemTypeA'));
+const ItemProduct = lazy(() => import('./product/ItemTypeA'));
 
 const Wrap = styled.div``;
 const H1 = styled.h1`

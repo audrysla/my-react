@@ -1,7 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
 import NavItems from './navItems' 
-import { Items } from '../constants/constNav'
+import { Items } from '../../constants/constNav'
+import {useMediaQuery} from 'react-responsive';
+
+// [S] 반응형
+export const PC = ({children}) => {
+  const isPc = useMediaQuery({
+    query : "(min-width:769px)"
+  });  
+  return <>{isPc && children}</>
+}
+// [E] 반응형
 
 const Ul = styled.ul``;
 const Lotte = styled.a`
@@ -12,8 +22,8 @@ const Lotte = styled.a`
 
 function Nav(){
   return ( 
-    <nav>        
-        <div className='btn-category'>카테고리</div>
+    <nav>
+        <PC><div className='btn-category'>카테고리</div></PC>
         <Ul>
           {
             Items.map((item, index) =>
@@ -25,7 +35,7 @@ function Nav(){
             )
           }      
         </Ul>
-        <Lotte href="#"/>
+        <PC><Lotte href="#"/></PC>
     </nav>
   ) 
 }

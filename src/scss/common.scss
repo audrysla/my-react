@@ -1,15 +1,12 @@
 $color-green:#01aa4d;
 $color-blue:#118eff;
 .bar{height:10px;background:$color-green;}
-#root{min-width: 1050px;}
 #header{
     position: relative;
     z-index: 1;
     padding-bottom:20px;
     box-shadow: 1px 1px 5px rgba(0,0,0, .3);       
-    .headerGroup{     
-        margin:0 auto;
-        width:1050px;
+    .headerGroup{
         .searchGroup{            
             display: flex;
             justify-content: space-between;
@@ -123,11 +120,7 @@ footer{
     background:#333;
     padding:25px 0 50px 0;
     font-size:12px;color:#fff;
-    line-height: 18px;
-    .inner{
-        margin:0 auto;        
-        width:1050px;
-    }    
+    line-height: 18px; 
 } 
 
 .loader {

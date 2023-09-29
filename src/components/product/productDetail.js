@@ -1,23 +1,24 @@
 import React from 'react';
 import styled from "styled-components";
-import '../build-css/common.css';
-import '../build-css/contents.css';
-import { Products } from '../constants/Products'
+import '../../build-css/common.css';
+import '../../build-css/contents.css';
+import { Products } from '../../constants/Products'
 import { useParams } from 'react-router-dom';
 
 function ProductDetail(){
   const { num } = useParams();
   const result = Products.filter(list => list.id === Number(num));
   const Wrap = styled.div``
+  const Div = styled.div``
   const Images = styled.img``
   // console.log(result)
   return ( 
     <>
       <Wrap className='product_top'>
-        <div className='thumb'>
+        <Div className='thumb'>
           <Images src={result[0].img}/>
-        </div>
-        <div>
+        </Div>
+        <Div>
           <ul>                
             <li className='type'>
               <em>{result[0].cate}</em>
@@ -56,7 +57,7 @@ function ProductDetail(){
               </tr>
             </tbody>
           </table>
-        </div>
+        </Div>
       </Wrap>
     </>
   )

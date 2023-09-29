@@ -1,1 +1,142 @@
-// mixin 모음
+
+$pc-size : 1050px;
+$mo-size : 768px;
+$win-size : $pc-size;
+
+@mixin mobile {
+    @media (max-width: $mo-size){
+        @content;
+    }
+}
+
+@mixin pc {
+    @media (min-width: ($mo-size + 1)) {
+        @content;
+    }
+}
+
+#root{
+    @include pc { 
+        min-width: $win-size;        
+        #header{
+            .headerGroup{     
+                margin:0 auto;
+                width:$win-size;
+            }
+        }
+        .subLayout{
+            margin:0 auto;
+            padding:50px 0;
+            max-width:$win-size;
+        }
+        #contents{
+            margin:0 auto; 
+            min-width:$win-size;
+            min-height: 800px;
+        }
+        footer{
+            .inner{
+                margin:0 auto;        
+                width:$win-size;
+            }    
+        }
+    }
+    @include mobile { 
+        font-family: -apple-system, BlinkMacSystemFont, AppleSDGothicNeo, "Apple SD Gothic Neo", Helvetica, "Noto Sans KR", "malgun gothic", "맑은 고딕", sans-serif;
+        overflow:hidden;
+        $win-size : auto;
+        min-width: $win-size;
+        #header{
+            padding-bottom:0;
+            .headerGroup{     
+                margin:0 auto;
+                width:$win-size;
+                nav{
+                    padding:15px 0;
+                    border-top:1px solid #ddd;
+                    overflow: hidden;
+                    overflow-x: scroll;
+                    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+                    scrollbar-width: none; /* 파이어폭스 */
+                    &::-webkit-scrollbar {
+                        display: none; /* 크롬, 사파리, 오페라, 엣지 */
+                    }
+                    ul{
+                        li{
+                            a{
+                                
+                                font-size:1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .searchGroup{
+                justify-content: center;
+                h1{
+                    width:auto;                    
+                }
+            }
+        }
+        .subLayout{
+            padding:0 0 50px;
+            max-width:$win-size;
+        }
+        #contents{
+            margin:0 auto; 
+            min-width:$win-size;
+            min-height: auto;
+        }
+        footer{
+            .inner{
+                width:$win-size;
+                margin:0 auto;
+            }    
+        }
+        /* 전체 상품 리스트 */
+        .listA{
+            padding:10px;
+            li{
+                flex:1 1 40%;
+                padding-bottom:50px;        
+                // max-width:255px;
+                .thumb-tag{
+                    width:auto;
+                    height:auto;
+                    img{
+                        transition:unset;
+                    }
+                    &:hover{
+                        img{transform: unset}
+                    }
+                }
+            }
+        }
+        /* 상품상세 페이지 */
+        .product_top{
+            display: block;
+            .thumb{
+                width:auto;
+                img{width:100%;vertical-align: top;}
+                &+div{padding:10px;}
+            } 
+            ul{width:auto;}
+            table{
+                margin-top:50px;
+                width:100%;
+                border-top: 1px solid #f0f2f5;
+                th,td{
+                    border-bottom: 1px solid #f0f2f5;
+                    font-size:16px
+                }
+                th{
+                    font-weight:bold;width:120px;text-align:left;
+                }
+                td{
+                    padding:20px 0;line-height: 28px;
+                    
+                }
+            }
+        }
+    }
+}
