@@ -6,6 +6,7 @@ import Header from './header';
 import SubPage from '../sub/subPage';
 import ProductDetail from '../components/product/productDetail';
 import Footer from './Footer';
+import ScrollTop from './ScrollTop';
 
 const Warp = styled.div`
   min-height:500px;
@@ -28,6 +29,7 @@ function Routing(){
   return (
     <Warp>      
       <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <ScrollTop />
         <Header/>          
         <SubLayout className='subLayout'>
           <Routes>
