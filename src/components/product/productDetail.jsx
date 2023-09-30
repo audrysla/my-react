@@ -4,6 +4,7 @@ import '../../build-css/common.css';
 import '../../build-css/contents.css';
 import { Products } from '../../constants/Products'
 import { useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function ProductDetail(){
   const { num } = useParams();
@@ -19,7 +20,7 @@ function ProductDetail(){
           <Images src={result[0].img}/>
         </Div>
         <Div>
-          <ul>                
+          <ul>
             <li className='type'>
               <em>{result[0].cate}</em>
               <em>상품번호 : {result[0].id}</em>
@@ -28,7 +29,7 @@ function ProductDetail(){
             <li className='dimmedPrice'>
               <em>{result[0].discount}</em>
               <i>{result[0].dimmedPrice}</i>
-            </li>               
+            </li>
             <li className='price'>{result[0].price}</li>
           </ul>
           <table>

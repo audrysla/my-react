@@ -29,12 +29,12 @@ const H1 = styled.h1`
 
 function Contents(){
   return (
-    <div id="contents">
+    <div id="contents">      
+      <Container className='container'>
+        <SwiperComponent/>
+        <PC><Tab/></PC>
+      </Container>
       <PC>
-        <Container className='container'>
-          <SwiperComponent/>
-          <Tab/>      
-        </Container>
         <MainProduct>
           <H1>추천 상품 404</H1>
           <div className="banner bn1">추석 선물</div>

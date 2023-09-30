@@ -1,47 +1,4 @@
-$pc-size : 1050px; 
-$mo-size : 768px;
-$win-size : $pc-size;
-
-.react-loading-skeleton{height:100%;}
-@mixin mobile {
-    @media (max-width: $mo-size){
-        @content;
-    }
-}
-@mixin pc {
-    @media (min-width: ($mo-size + 1)) {
-        @content;
-    }
-}
-
-#root{
-    @include pc { 
-        min-width: $win-size;
-        #header{
-            .headerGroup{     
-                margin:0 auto;
-                width:$win-size;
-            }
-        }
-        .subLayout{
-            margin:0 auto;
-            padding:50px 0;
-            max-width:$win-size;
-        }
-        #contents{
-            margin:0 auto; 
-            min-width:$win-size;
-            min-height: 800px;
-        }
-        footer{
-            .inner{
-                margin:0 auto;
-                width:$win-size;
-            }    
-        }
-    }
-}
-
+@import './mixin.scss';
 #root{
     @include mobile { 
         font-family: -apple-system, BlinkMacSystemFont, AppleSDGothicNeo, "Apple SD Gothic Neo", Helvetica, "Noto Sans KR", "malgun gothic", "맑은 고딕", sans-serif;
@@ -90,21 +47,15 @@ $win-size : $pc-size;
             min-width:$win-size;
             min-height: auto;
             .container{
-                display:block;
-                h1{display:none;}
-                #swiperId{
-                    width:auto;
-                    height:auto;
-                    padding-bottom:35px;
-                }
+                padding-top:0px;
+                background:#333;
                 .swiper-slide{
+                    border:1px solid;
                     .itemProduct{
                         .thumb-tag{
-                            width:100%;
-                            height:auto;
-                            padding:0;
+                            width:500px;
+                            height:468px;
                         }
-                        span{padding:0 15px;}
                     }             
                 }   
             }

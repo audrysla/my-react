@@ -1,0 +1,28 @@
+@import './mixin.scss';
+#root{
+    @include pc { 
+        min-width: $win-size;
+        #header{
+            .headerGroup{     
+                margin:0 auto;
+                width:$win-size;
+            }
+        }
+        .subLayout{
+            margin:0 auto;
+            padding:50px 0;
+            max-width:$win-size;
+        }
+        #contents{
+            margin:0 auto; 
+            min-width:$win-size;
+            min-height: 800px;
+        }
+        footer{
+            .inner{
+                margin:0 auto;
+                width:$win-size;
+            }    
+        }
+    }
+}

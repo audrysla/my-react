@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Products } from '../constants/Products'
 import styled from "styled-components";
 import ItemSkeleton from './product/ItemSkeleton'

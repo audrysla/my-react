@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollTop from './ScrollTop';
 import styled from "styled-components";
+import ProductDetail from '../components/product/productDetail';
 import Main from '../js/main';
 import Header from './header';
 import SubPage from '../sub/subPage';
-import ProductDetail from '../components/product/productDetail';
 import Footer from './Footer';
-import ScrollTop from './ScrollTop';
 
 const Warp = styled.div`
   min-height:500px;

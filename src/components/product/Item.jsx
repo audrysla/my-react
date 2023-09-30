@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import '../../build-css/mixin.css'
 
 const Image = styled.img``;
 const Tag = styled.span`
