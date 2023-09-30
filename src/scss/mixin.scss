@@ -96,18 +96,22 @@ $win-size : $pc-size;
                     width:auto;
                     height:auto;
                     padding-bottom:35px;
-                }
-                .swiper-slide{
-                    .itemProduct{
-                        .thumb-tag{
+                }                
+                .itemProduct{
+                    .thumb-tag{
+                        width:100%;
+                        height:(600px/790px)*100vw; 
+                        padding:0;
+                        img{margin-top:-20%;}
+                        .react-loading-skeleton{
                             width:100%;
-                            height:230px;
-                            padding:0;
-                            img{margin-top:-25%;}
+                            margin:0;padding:0;
                         }
-                        span{padding:0 15px;}
-                    }             
-                }   
+                    }
+                    .title-tag,
+                    .dimmedPrice-tag,
+                    .price-tag{padding:0 15px;}
+                }  
             }
         }
         footer{
