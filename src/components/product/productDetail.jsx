@@ -40,7 +40,7 @@ const Tit = styled.div`
   margin: 0 auto;
   padding-right:40px;
   font-weight:bold;
-  font-size:20px;
+  font-size:18px;
 `;
 const Btn = styled.button`
   flex: 0 0 60px;
@@ -50,6 +50,15 @@ const Btn = styled.button`
   background-position: center center;
   background-color: transparent;
   border: none;
+`
+const Bn = styled.div`
+  text-align:center;
+  // font-weight:bold;
+  padding:10px;
+  // border-bottom:1px solid #ddd;
+  font-size:16px;
+  background:#01aa4d;
+  color:#fff;
 `
 
 function ProductDetail(){
@@ -63,6 +72,7 @@ function ProductDetail(){
       <div className='inner'>
       <Wrap className='product_top'>
         <Mobile>
+          <Bn>🎉 첫 구매 회원 모두 100만원 지급!! 🎁</Bn>
           <Bar>
             <Btn onClick={() => navigate(-1)}></Btn>
             <Tit>{result[0].title}</Tit>
