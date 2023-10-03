@@ -14,6 +14,7 @@ font-family: 'Noto Sans KR', sans-serif;
       width:22px;
       height:22px;
       line-height: 20px;
+      font-size:15px;
       border-radius:100%;
       text-align:center;
       position: absolute;

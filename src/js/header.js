@@ -34,7 +34,7 @@ function Header(){
           <PC>
             <Search/>            
           </PC>
-          <Mobile>🎉🎉🎉</Mobile>
+          {/* <Mobile>🎉🎉🎉</Mobile> */}
           <Util/>
         </SearchGroup>
         <Nav/> 
