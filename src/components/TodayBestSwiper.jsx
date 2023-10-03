@@ -55,11 +55,11 @@ function TodayBestSwiper(){
           spaceBetween={15}
           slidesPerView={1}
           loop={true}
-          // autoplay={{ 
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          //   pauseOnMouseEnter: true,
-          // }}
+          autoplay={{ 
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           // navigation {/*좌우 버튼*/}
           pagination={{ clickable: true }}        
           // onSlideChange={() => console.log('slide change')}

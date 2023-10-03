@@ -11,9 +11,16 @@ import Footer from './Footer';
 const Warp = styled.div`
   min-height:500px;
 `;
-
+const Bn = styled.div`
+  text-align:center;
+  // font-weight:bold;
+  padding:10px;
+  // border-bottom:1px solid #ddd;
+  font-size:16px;
+  background:#01aa4d;
+  color:#fff;
+`
 const SubLayout = styled.div``;
-
 const GoTop = styled.a``
 
 function Routing(){
@@ -27,6 +34,7 @@ function Routing(){
   return (
     <Warp>      
       <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Bn>🎉 첫 구매 회원 모두 100만원 지급!! 🎁</Bn>
         <ScrollTop />
         {/* <Header/> */}
         <SubLayout className='subLayout'>

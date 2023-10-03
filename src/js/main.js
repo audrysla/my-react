@@ -34,8 +34,7 @@ function Contents(){
       <Header/>
       <div id="contents">
         {/* <MainBn/> */}
-        <div className='inner'>
-        
+        <div className='inner'>        
             <Container className='container'>
               <SwiperComponent/>
               <PC><Tab/></PC>

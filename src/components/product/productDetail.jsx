@@ -38,9 +38,9 @@ const Tit = styled.div`
   text-align:center;
   flex: 0 0 60%;
   margin: 0 auto;
-  padding-right:40px;
+  padding:5px 60px 5px 0;
   font-weight:bold;
-  font-size:20px;
+  font-size:18px;
 `;
 const Btn = styled.button`
   flex: 0 0 60px;
@@ -62,7 +62,7 @@ function ProductDetail(){
       <PC><Header/></PC>
       <div className='inner'>
       <Wrap className='product_top'>
-        <Mobile>
+        <Mobile>          
           <Bar>
             <Btn onClick={() => navigate(-1)}></Btn>
             <Tit>{result[0].title}</Tit>

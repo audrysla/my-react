@@ -27,7 +27,7 @@ const SearchGroup = styled.div``;
 function Header(){
   return (
     <div id="header">    	
-      <div className='bar'></div>    
+      {/* <div className='bar'></div>     */}
       <HeaderGroup className='headerGroup'>      
         <SearchGroup className='searchGroup'>
           <h1><a href="/my-react/">React</a></h1>
