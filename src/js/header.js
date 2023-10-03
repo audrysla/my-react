@@ -32,9 +32,10 @@ function Header(){
         <SearchGroup className='searchGroup'>
           <h1><a href="/my-react/">React</a></h1>
           <PC>
-            <Search/>
-            <Util/>
+            <Search/>            
           </PC>
+          <Mobile>🎉🎉🎉</Mobile>
+          <Util/>
         </SearchGroup>
         <Nav/> 
       </HeaderGroup>

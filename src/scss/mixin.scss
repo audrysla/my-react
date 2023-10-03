@@ -77,9 +77,13 @@ $win-size : $pc-size;
                 }
             }
             .searchGroup{
-                justify-content: center;
+                // justify-content: center;
+                padding:20px 25px;
                 h1{
                     width:auto;                    
+                }
+                .util{
+                    width:auto;
                 }
             }
         }
