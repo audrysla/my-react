@@ -20,7 +20,7 @@ export const PC = ({children}) => {
   return <>{isPc && children}</>
 }
 // [E] 반응형
-
+ 
 const HeaderGroup = styled.div``;
 const SearchGroup = styled.div``;
 

@@ -57,7 +57,7 @@ function ProductDetail(){
   const result = Products.filter(list => list.id === Number(num));
   const navigate = useNavigate();
 
-  return ( 
+  return (
     <>
       <PC><Header/></PC>
       <div className='inner'>

@@ -31,7 +31,7 @@ function Routing(){
       window.scrollTo({top:0, behavior: "smooth"})
     });
   });
-  return (
+  return ( 
     <Warp>      
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Bn>🎉 첫 구매 회원 모두 100만원 지급!! 🎁</Bn>
