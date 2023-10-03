@@ -49,11 +49,12 @@ $color-blue:#118eff;
                 display: flex;
                 justify-content: flex-end;
                 gap:10px;
-                span{
+                button{
                     position: relative;
                     display: inline-block;        
                     color:transparent;
                     margin-left:10px;
+                    border:0;background:transparent;
                     cursor:pointer;
                     &:nth-child(1){
                         background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6519c842.png);
