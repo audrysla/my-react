@@ -62,7 +62,7 @@ function ProductDetail(){
       <PC><Header/></PC>
       <div className='inner'>
       <Wrap className='product_top'>
-        <Mobile>          
+        <Mobile>
           <Bar>
             <Btn onClick={() => navigate(-1)}></Btn>
             <Tit>{result[0].title}</Tit>
