@@ -13,7 +13,7 @@ function SubPage(item){
   return (
     <>
     <Header/>
-    <Warp>      
+    <Warp className='inner'>      
       <h2>{id} {Items[id].title} 페이지 입니다.</h2>
     </Warp>
     </>

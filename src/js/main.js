@@ -1,5 +1,5 @@
 import React from 'react';
-import {useMediaQuery} from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 import styled from "styled-components";
 import Tab from '../components/tab/Tab';
 import SwiperComponent from '../components/TodayBestSwiper';
