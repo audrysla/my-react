@@ -10,13 +10,15 @@
         }
         .subLayout{
             margin:0 auto;
-            padding:50px 0;
+            padding-bottom:50px;
             max-width:$win-size;
         }
         #contents{
-            margin:0 auto; 
-            min-width:$win-size;
-            min-height: 800px;
+            .inner{
+                margin:0 auto; 
+                min-width:$win-size;
+                min-height: 800px;
+            }
         }
         footer{
             .inner{

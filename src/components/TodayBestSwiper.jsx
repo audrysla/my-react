@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Products } from '../constants/Products'
 import styled from "styled-components";
 import ItemSkeleton from './product/ItemSkeleton'
@@ -55,11 +55,11 @@ function TodayBestSwiper(){
           spaceBetween={15}
           slidesPerView={1}
           loop={true}
-          autoplay={{ 
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
+          // autoplay={{ 
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: true,
+          // }}
           // navigation {/*좌우 버튼*/}
           pagination={{ clickable: true }}        
           // onSlideChange={() => console.log('slide change')}

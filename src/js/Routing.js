@@ -28,7 +28,7 @@ function Routing(){
     <Warp>      
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ScrollTop />
-        <Header/>          
+        {/* <Header/> */}
         <SubLayout className='subLayout'>
           <Routes>
             <Route path='/' element={<Main/>} />

@@ -4,7 +4,8 @@ import styled from "styled-components";
 import Tab from '../components/tab/Tab';
 import SwiperComponent from '../components/TodayBestSwiper';
 import ProductList from '../components/product/ProductList';
-
+// import MainBn from '../components/MainSwiper';
+import Header from './header';
 import '../build-css/common.css';
 import '../build-css/contents.css';
 
@@ -26,23 +27,29 @@ const H1 = styled.h1`
   font-size:25px;
   margin-bottom:15px;
 `;
-
+const Warp = styled.div``;
 function Contents(){
   return (
-    <div id="contents">      
-      <Container className='container'>
-        <SwiperComponent/>
-        <PC><Tab/></PC>
-      </Container>
-      <PC>
-        <MainProduct>
-          <H1>추천 상품 404</H1>
-          <div className="banner bn1">추석 선물</div>
-        </MainProduct> 
-      </PC>
-      <ProductList />
-      <div className="banner bn2">추석 선물</div>
-    </div>
+    <Warp> 
+      <Header/>
+      <div id="contents">
+        {/* <MainBn/> */}
+        <div className='inner'>
+        
+            <Container className='container'>
+              <SwiperComponent/>
+              <PC><Tab/></PC>
+            </Container>
+            <MainProduct>
+              <PC><H1>추천 상품 404</H1></PC>
+              <div className="banner bn1">추석 선물</div>
+            </MainProduct> 
+          
+          <ProductList />
+          <div className="banner bn2">추석 선물</div>
+        </div>
+      </div>
+    </Warp> 
   )
 }
 

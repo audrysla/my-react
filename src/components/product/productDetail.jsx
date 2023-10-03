@@ -4,18 +4,47 @@ import '../../build-css/common.css';
 import '../../build-css/contents.css';
 import { Products } from '../../constants/Products'
 import { useParams } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function ProductDetail(){
   const { num } = useParams();
   const result = Products.filter(list => list.id === Number(num));
-  const Wrap = styled.div``
-  const Div = styled.div``
-  const Images = styled.img``
-  // console.log(result)
+  const Wrap = styled.div``;
+  const Div = styled.div``;
+  const Images = styled.img``;
+  const Bar = styled.div`
+    display: flex;
+    align-items: center;
+  `;
+  const Tit = styled.div`
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    text-align:center;
+    flex: 0 0 60%;
+    margin: 0 auto;
+    padding-right:40px;
+    font-weight:bold;
+    font-size:20px;
+  `;
+  const Btn = styled.button`
+    flex: 0 0 60px;
+    height: 60px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGg1MHY1MEgweiIvPgogICAgICAgIDxwYXRoIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTI3IDMyLjA3MUwxOS45MjkgMjUgMjcgMTcuOTI5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=);
+    background-size: cover;
+    background-position: center center;
+    background-color: transparent;
+    border: none;
+  `
+  const navigate = useNavigate();
   return ( 
-    <>
+    <>    
       <Wrap className='product_top'>
+        <Bar>
+          <Btn onClick={() => navigate(-1)}></Btn>
+          <Tit>{result[0].title}</Tit>
+        </Bar>
         <Div className='thumb'>
           <Images src={result[0].img}/>
         </Div>

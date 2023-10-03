@@ -24,9 +24,11 @@ $win-size : $pc-size;
             }
         }
         .subLayout{
-            margin:0 auto;
-            padding:50px 0;
-            max-width:$win-size;
+            .inner{
+                margin:0 auto;
+                padding:50px 0;
+                max-width:$win-size;
+            }
         }
         #contents{
             margin:0 auto; 
@@ -114,7 +116,7 @@ $win-size : $pc-size;
                 }  
             }
         }
-        footer{
+        footer{ 
             .inner{
                 width:$win-size;
                 margin:0 auto;
