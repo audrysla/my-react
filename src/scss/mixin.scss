@@ -45,8 +45,7 @@ $win-size : $pc-size;
 }
 
 #root{
-    @include mobile { 
-        font-family: -apple-system, BlinkMacSystemFont, AppleSDGothicNeo, "Apple SD Gothic Neo", Helvetica, "Noto Sans KR", "malgun gothic", "맑은 고딕", sans-serif;
+    @include mobile {         
         overflow:hidden;
         $win-size : auto;
         min-width: $win-size;
@@ -84,6 +83,9 @@ $win-size : $pc-size;
                 }
                 .util{
                     width:auto;
+                    button:nth-child(2){
+                        font-size:14px;
+                    }
                 }
             }
         }

@@ -2,7 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 
 const Div = styled.div``;
-const Btn = styled.button`    
+const Btn = styled.button`
+font-family: 'Noto Sans KR', sans-serif;
   &:nth-child(2){
     position:relative;
     &::after{
@@ -18,7 +19,7 @@ const Btn = styled.button`
       position: absolute;
       top: -8px;
       right: -8px;
-      font-weight:bold;
+      font-weight:600;
     }
   }
 `;
