@@ -13,7 +13,7 @@ $color-blue:#118eff;
     }
     100% {
         transform: rotate( 0deg );
-    }    
+    }
   }
 #header{
     position: relative;
@@ -63,6 +63,23 @@ $color-blue:#118eff;
                 display: flex;
                 justify-content: flex-end;
                 gap:20px;
+                position:relative;
+                &:after{
+                    content:"6";
+                    color:#fff;
+                    background:#e93838;
+                    display:block;
+                    width:22px;
+                    height:22px;
+                    line-height: 20px;
+                    font-size:15px;
+                    border-radius:100%;
+                    text-align:center;
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                    font-weight:600;
+                }
                 button{
                     position: relative;
                     display: inline-block;        
@@ -86,8 +103,8 @@ $color-blue:#118eff;
                         height: 26px;
                         transform-origin:50% 0 0;
                         animation-name: shake;
-                        animation-duration: 1s;
-                        animation-delay: 1s;
+                        animation-duration: 1.3s;
+                        // animation-delay: 1s;
                         animation-iteration-count: infinite;
                         animation-timing-function: linear;
                         animation-direction: alternate;
