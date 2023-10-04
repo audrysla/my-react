@@ -51,13 +51,27 @@ $win-size : $pc-size;
         min-width: $win-size;
         #header{
             padding-bottom:0;
+            .searchGroup{
+                // justify-content: center;
+                padding:15px 20px;
+                h1{
+                    width:auto;                    
+                }
+                .util{
+                    width:auto;
+                    gap:15px;
+                    button:nth-child(2){
+                        font-size:14px;
+                    }
+                }
+            }
             .headerGroup{     
                 margin:0 auto;
                 width:$win-size;
                 nav{
                     position:sticky;
                     top:0;
-                    padding:15px 0;
+                    padding:12px 0;
                     border-top:1px solid #ddd;
                     overflow: hidden;
                     overflow-x: scroll;
@@ -68,24 +82,11 @@ $win-size : $pc-size;
                     }
                     ul{
                         li{
+                            width:80px;
                             a{                                
-                                font-size:1rem;
+                                font-size:0.9rem;
                             }
                         }
-                    }
-                }
-            }
-            .searchGroup{
-                // justify-content: center;
-                padding:20px 25px;
-                h1{
-                    width:auto;                    
-                }
-                .util{
-                    width:auto;
-                    gap:15px;
-                    button:nth-child(2){
-                        font-size:14px;
                     }
                 }
             }

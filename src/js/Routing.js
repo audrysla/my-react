@@ -14,7 +14,7 @@ const Warp = styled.div`
 const Bn = styled.div`
   text-align:center;
   // font-weight:bold;
-  padding:12px;
+  padding:10px;
   // border-bottom:1px solid #ddd;
   font-size:14px;
   background:#01aa4d;

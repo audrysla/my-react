@@ -30,6 +30,15 @@ const Bar = styled.div`
   display: flex;
   align-items: center;
 `;
+const Btn = styled.button`
+  flex: 0 0 60px;
+  height: 50px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGg1MHY1MEgweiIvPgogICAgICAgIDxwYXRoIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTI3IDMyLjA3MUwxOS45MjkgMjUgMjcgMTcuOTI5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=);
+  background-size: cover;
+  background-position: center center;
+  background-color: transparent;
+  border: none;
+`
 const Tit = styled.div`
   overflow: hidden;
   white-space: nowrap;
@@ -40,17 +49,8 @@ const Tit = styled.div`
   margin: 0 auto;
   padding:5px 60px 5px 0;
   font-weight:bold;
-  font-size:18px;
+  font-size:16px;
 `;
-const Btn = styled.button`
-  flex: 0 0 60px;
-  height: 60px;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGg1MHY1MEgweiIvPgogICAgICAgIDxwYXRoIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTI3IDMyLjA3MUwxOS45MjkgMjUgMjcgMTcuOTI5Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=);
-  background-size: cover;
-  background-position: center center;
-  background-color: transparent;
-  border: none;
-`
 
 function ProductDetail(){
   const { num } = useParams();
