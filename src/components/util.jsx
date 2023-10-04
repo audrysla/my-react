@@ -9,7 +9,7 @@ font-family: 'Noto Sans KR', sans-serif;
     &::after{
       content:"6";
       color:#fff;
-      background:red;
+      background:#e93838;
       display:block;
       width:22px;
       height:22px;
