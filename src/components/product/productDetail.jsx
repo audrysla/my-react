@@ -7,6 +7,7 @@ import { Products } from '../../constants/Products'
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import Comment from '../Comment'
 
 // [S] 반응형
 export const Mobile = ({children}) => {
@@ -61,57 +62,58 @@ function ProductDetail(){
     <>
       <PC><Header/></PC>
       <div className='inner'>
-      <Wrap className='product_top'>
-        <Mobile>
-          <Bar>
-            <Btn onClick={() => navigate(-1)}></Btn>
-            <Tit>{result[0].title}</Tit>
-          </Bar>
-        </Mobile>
-        <Div className='thumb'>
-          <Images src={result[0].img}/>
-        </Div>
-        <Div>
-          <ul>
-            <li className='type'>
-              <em>{result[0].cate}</em>
-              <em>상품번호 : {result[0].id}</em>
-            </li>
-            <li className='title'>{result[0].title}</li>
-            <li className='dimmedPrice'>
-              <em>{result[0].discount}</em>
-              <i>{result[0].dimmedPrice}</i>
-            </li>
-            <li className='price'>{result[0].price}</li>
-          </ul>
-          <table>
-            <thead>
-              <tr><td>테이블 정보</td></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>쿠폰할인</th>
-                <td>10% 할인쿠폰 받기</td>
-              </tr>
-              <tr>
-                <th>결제혜택</th>
-                <td>
-                  현대M포인트 5% 사용 가능<br/>
-                  최대 6개월 무이자
-                </td>
-              </tr>
-              <tr>
-                <th>배송정보</th>
-                <td>
-                  해외 직배송<br/>
-                  무료배송<br/>
-                  10/18(수) 이내 도착 예정배송 정보
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </Div>
-      </Wrap>
+        <Wrap className='product_top'>
+          <Mobile>
+            <Bar>
+              <Btn onClick={() => navigate(-1)}></Btn>
+              <Tit>{result[0].title}</Tit>
+            </Bar>
+          </Mobile>
+          <Div className='thumb'>
+            <Images src={result[0].img}/>
+          </Div>
+          <Div>
+            <ul>
+              <li className='type'>
+                <em>{result[0].cate}</em>
+                <em>상품번호 : {result[0].id}</em>
+              </li>
+              <li className='title'>{result[0].title}</li>
+              <li className='dimmedPrice'>
+                <em>{result[0].discount}</em>
+                <i>{result[0].dimmedPrice}</i>
+              </li>
+              <li className='price'>{result[0].price}</li>
+            </ul>
+            <table>
+              <thead>
+                <tr><td>테이블 정보</td></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>쿠폰할인</th>
+                  <td>10% 할인쿠폰 받기</td>
+                </tr>
+                <tr>
+                  <th>결제혜택</th>
+                  <td>
+                    현대M포인트 5% 사용 가능<br/>
+                    최대 6개월 무이자
+                  </td>
+                </tr>
+                <tr>
+                  <th>배송정보</th>
+                  <td>
+                    해외 직배송<br/>
+                    무료배송<br/>
+                    10/18(수) 이내 도착 예정배송 정보
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </Div>
+        </Wrap>
+        <Comment/>
       </div>
     </>
   )
