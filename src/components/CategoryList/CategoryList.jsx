@@ -11,6 +11,7 @@ const Div = styled.div``;
 const SubBoard = styled.div`
   background:#ddd
 `;
+const Li = styled.li``;
 
 function Util(){
   const [visible, setVisible] = useState(false);
@@ -35,14 +36,14 @@ function Util(){
         <Div className='cateList'>
           <ul>
             {Cate.map((item, index) =>
-              <li key={item.id}>
+              <Li key={item.id}>
                 <a href="#"
                   onMouseEnter={() => {
                     setIsHovering(true);
                     setCurrentMenu(index);
                   }}
                 >{item.mMenu}</a>
-              </li>
+              </Li>
             )}
           </ul>
         </Div>      
@@ -51,7 +52,7 @@ function Util(){
           <Div className='subCate'>
             <ul>
               {Cate[currentMenu].sMenu.map(item =>
-                <li><Link to={`/sub/${item}`}>{item}</Link></li>
+                <Li><Link to={`/sub/${item}`}>{item}</Link></Li>
               )}
             </ul>
           </Div>
