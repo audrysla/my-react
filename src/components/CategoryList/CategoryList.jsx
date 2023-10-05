@@ -6,22 +6,26 @@ import { Link } from "react-router-dom";
 const CateWrap = styled.div`
   position:relative;
 `;
+const SubBoard = styled.div`
+  background:#ddd;
+`;
 const BtnCate = styled.button``;
 const Div = styled.div``;
-const SubBoard = styled.div`
-  background:#ddd
-`;
 const Li = styled.li``;
 
 function Util(){
   const [visible, setVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [currentMenu, setCurrentMenu] = useState();
+  
+  const categoryShow = () =>{
+    setVisible(!visible);
+  }
   return (
     <CateWrap>
       <BtnCate className='btn-category'
         onClick={() =>{
-          setVisible(!visible)
+          categoryShow();
         }}
       >카테고리
       </BtnCate>
@@ -46,7 +50,7 @@ function Util(){
               </Li>
             )}
           </ul>
-        </Div>      
+        </Div>
         {
           isHovering && 
           <Div className='subCate'>
