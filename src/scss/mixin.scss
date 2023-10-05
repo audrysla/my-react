@@ -124,7 +124,9 @@ $win-size : $pc-size;
                 }  
             }
         }
-        footer{ 
+        footer{
+            padding-left: 15px;
+            padding-right: 15px;
             .inner{
                 width:$win-size;
                 margin:0 auto;
@@ -166,7 +168,7 @@ $win-size : $pc-size;
                 img{
                     width:100%;vertical-align: top;
                 }
-                &+div{padding:10px;}
+                &+div{padding:15px;}
             } 
             ul{width:auto;}
             table{

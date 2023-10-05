@@ -9,12 +9,14 @@ function SubPage(item){
   // console.log(useParams())
   const Warp = styled.div`
     padding:30px 10px;
+    text-align:center;
+    font-size:30px;
   `;
   return (
     <>
     <Header/>
     <Warp className='inner'>      
-      <h2>{id} {Items[id].title} 페이지 입니다.</h2>
+      <h2>{id} 페이지 입니다.</h2>
     </Warp>
     </>
   )

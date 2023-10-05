@@ -7,7 +7,7 @@ const Li = styled.li``;
 function Nav({item, index}){
   return (    
     <Li>
-        <Link to={`/sub/${index}`}>{item.title}</Link>
+        <Link to={`/sub/${item.title}`}>{item.title}</Link>
     </Li>
   ) 
 }
