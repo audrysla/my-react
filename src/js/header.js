@@ -2,7 +2,7 @@ import React from 'react';
 import {useMediaQuery} from 'react-responsive';
 import styled from "styled-components";
 import '../build-css/common.css';
-import Util from '../components/util'
+import Util from '../components/util/util'
 import Nav from '../components/nav/nav'
 import Search from '../components/Search'
 
