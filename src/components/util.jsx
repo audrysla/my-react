@@ -28,10 +28,31 @@ font-family: 'Noto Sans KR', sans-serif;
 
 function Util(){  
   const [visible, setVisible] = useState(false);
+  const body = document.querySelector("body");
+
+  // 알람 레이어 열기
+  const showAlarm = () => {
+    setVisible(!visible);
+    body.addEventListener('click', clickBodyEvent);
+  }
+  
+  // 알람 레이어 닫기
+  function clickBodyEvent(event) {
+    var target = event.target;    
+    if(target != event.currentTarget.querySelector("#contents") &&
+      target != event.currentTarget.querySelector("#header") &&
+      target != event.currentTarget.querySelector(".container"))
+      return ;
+      
+    setVisible(false);
+    body.removeEventListener('click', clickBodyEvent);
+    // console.log(target);    
+  }
+
   return (
     <Div className='util' >
       <Btn>톡</Btn>
-      <Btn onClick={() => setVisible(!visible)}>알림</Btn>
+      <Btn onClick={showAlarm}>알림</Btn>
       {visible && <Alarm/>}
     </Div>
   ) 
