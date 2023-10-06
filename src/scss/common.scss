@@ -15,6 +15,12 @@ $color-blue:#118eff;
 //         transform: rotate( 0deg );
 //     }
 //   }
+@keyframes alarm-ani {
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0px, 0);
+    }
+}
 .utterances{max-width: 1080px;}
 #header{
     position: relative;
@@ -130,28 +136,56 @@ $color-blue:#118eff;
                         border-bottom:1px solid #ddd;
                     }
                     ul{
-                        height:350px;
+                        height:450px;
                         padding:20px;
                         overflow: hidden;
-                        overflow-y:auto;
-                        
+                        overflow-y:auto;                        
                         &::-webkit-scrollbar {
                             width: 5px;
                         }
-                        &::-webkit-scrollbar-thumb {
+                        &::-webkit-scrollbar-thumb { 
                             background-color: #ccc;
                         }
                         &::-webkit-scrollbar-track {
                             background-color: #eee;
                         }        
                         li{
+                            transform: translate3d(0, 4px, 0);
+                            opacity: 0;
+                            @for $i from 1 through 6{
+                                &:nth-child(#{$i}){
+                                    animation: .3s linear #{$i*10/100}s forwards alarm-ani;
+                                }
+                            }
                             &+li{margin-top:25px;}
                             div{                       
-                                width:300px;         
+                                width:300px;
+                                border:1px solid #ddd;
                                 border-radius: 10px;
                                 padding:15px;
                                 background:#fff;
                                 box-shadow:2px 5px 5px rgba(0,0,0,.1);
+                                span{
+                                    display:flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    em{
+                                        font-size:12px;
+                                        color:#0b82b9;
+                                    }
+                                }
+                                a{
+                                    display:block;
+                                    color:#333;
+                                    margin-top:10px;
+                                    font-size:14px;
+                                    line-height: 20px;;
+                                }
+                                button{
+                                    margin-top:10px;
+                                    color:#333;
+                                    font-size:12px;
+                                }
                             }
                         }
                     }
