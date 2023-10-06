@@ -4,7 +4,7 @@ import ScrollTop from './ScrollTop';
 import styled from "styled-components";
 import ProductDetail from '../components/product/productDetail';
 import Main from '../js/main';
-import Header from './header';
+// import Header from './header';
 import SubPage from '../sub/subPage';
 import Footer from './Footer';
 

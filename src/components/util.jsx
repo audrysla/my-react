@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
+import Alarm from './Alarm';
 
 const Div = styled.div``;
 const Btn = styled.button`
@@ -25,11 +26,13 @@ font-family: 'Noto Sans KR', sans-serif;
   }
 `;
 
-function Util(){
+function Util(){  
+  const [visible, setVisible] = useState(false);
   return (
     <Div className='util' >
       <Btn>톡</Btn>
-      <Btn>알림</Btn>
+      <Btn onClick={() => setVisible(!visible)}>알림</Btn>
+      {visible && <Alarm/>}
     </Div>
   ) 
 }
