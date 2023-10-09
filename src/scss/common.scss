@@ -1,20 +1,29 @@
 $color-green:#01aa4d;
 $color-blue:#118eff;
 .bar{height:10px;background:$color-green;}
-// @keyframes shake {
-//     0% {
-//         transform: rotate( -15deg );
-//     }
-//     5% {
-//         transform: rotate( 15deg );
-//     }
-//     10% {
-//         transform: rotate( 0deg );
-//     }
-//     100% {
-//         transform: rotate( 0deg );
-//     }
-//   }
+@keyframes shake {
+    0% {
+        transform: rotate( 0deg );
+    }
+    2% {
+        transform: rotate( 15deg );
+    }
+    4% {
+        transform: rotate( -15deg );
+    }
+    6% {
+        transform: rotate( 15deg );
+    }
+    8% {
+        transform: rotate( -15deg );
+    }
+    10% {
+        transform: rotate( 0deg );
+    }
+    100% {
+        transform: rotate( 0deg );
+    }
+}
 @keyframes alarm-ani {
     100% {
         opacity: 1;
@@ -94,11 +103,11 @@ $color-blue:#118eff;
                         height: 26px;
                         transform-origin:50% 0 0;
                         animation-name: shake;
-                        animation-duration: 1.3s;
-                        // animation-delay: 1s;
+                        animation-duration: 3s;
+                        animation-delay: 1.3s;
                         animation-iteration-count: infinite;
                         animation-timing-function: linear;
-                        animation-direction: alternate;
+                        // animation-direction: alternate;
                     }
                 }
                 .alarm-wrap{
