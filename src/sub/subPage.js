@@ -11,6 +11,7 @@ function SubPage(item){
     padding:30px 10px;
     text-align:center;
     font-size:30px;
+    min-height:500px;
   `;
   return (
     <>

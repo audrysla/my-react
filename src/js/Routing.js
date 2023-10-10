@@ -6,6 +6,7 @@ import ProductDetail from '../components/product/productDetail';
 import Main from '../js/main';
 // import Header from './header';
 import SubPage from '../sub/subPage';
+import MyPage from '../sub/MyPage';
 import Footer from './Footer';
 
 const Warp = styled.div`
@@ -42,6 +43,7 @@ function Routing(){
             <Route path='/' element={<Main/>} />
             <Route path='/productDetail/:num' element={<ProductDetail/>} />
             <Route path='/sub/:id' element={<SubPage/>} />
+            <Route path='/my/:pg' element={<MyPage/>} />
           </Routes>
         </SubLayout>
         <Footer/>

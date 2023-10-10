@@ -33,9 +33,8 @@ $color-blue:#118eff;
 .utterances{max-width: 1080px;}
 #header{
     position: relative;
-    z-index: 1;
     padding-bottom:20px;
-    box-shadow: 1px 1px 5px rgba(0,0,0, .3);       
+    box-shadow: 1px 1px 5px rgba(0,0,0, .3);
     .headerGroup{
         .searchGroup{            
             display: flex;
@@ -82,11 +81,23 @@ $color-blue:#118eff;
                 gap:20px;
                 button{
                     position: relative;
-                    display: inline-block;        
+                    display: inline-block;
                     color:transparent;
                     border:0;background:transparent;
                     cursor:pointer;
-                    &:nth-child(1){
+                    &.my{
+                        width: 32px;
+                        height: 25px;
+                        background: url(https://img1.tmon.kr/fe/release/service/static/markup/pc/im/header/sp-header.png?v=20231006164246) no-repeat;
+                        background-position: -36px -143px;
+                        a{
+                            display:block;
+                            height:100%;
+                            width:100%;
+                            font-size:0;
+                        }
+                    }
+                    &.talk{
                         background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6519c842.png);
                         background-size: 435px 414px;
                         background-position: -190px -329px;
@@ -94,7 +105,7 @@ $color-blue:#118eff;
                         width: 26px;
                         height: 26px;
                     }
-                    &:nth-child(2){
+                    &.alram{
                         background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6519c842.png);
                         background-size: 435px 414px;
                         background-position: -136px -329px;

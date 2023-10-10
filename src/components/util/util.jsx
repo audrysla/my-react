@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 import Alarm from './Alarm';
+import { Link } from "react-router-dom";
 
 const Div = styled.div``;
 const Btn = styled.button`
 font-family: 'Noto Sans KR', sans-serif;
-  &:nth-child(2){
+  &.alram{
     position:relative;
     &::after{
       content:"6";
@@ -51,8 +52,11 @@ function Util(){
 
   return (
     <Div className='util' >
-      <Btn>톡</Btn>
-      <Btn onClick={showAlarm}>알림</Btn>
+      <Btn className='my'>
+        <Link to={`/my/주문내역`} >마이페이지</Link>
+      </Btn>
+      <Btn className='talk'>톡</Btn>
+      <Btn className='alram' onClick={showAlarm}>알림</Btn>
       {visible && <Alarm/>}
     </Div>
   ) 
