@@ -40,24 +40,7 @@ const Warp = styled.div`
     }
   }
 `;
-let lis = document.querySelectorAll('.lnb-ul li');
-    const lnbOn = (e) =>{
-      console.log(e);
-      e.classList.add('on')
-    }
-    lis.forEach(function(elem, index){ 
-      // console.log(elem, index)
-      elem.addEventListener('click', (e) => {
-        lnbOn(elem)
-      });
-    });
-function Lnb({page}){
-  
-  useEffect(() => {
-    
-  }, []); // useEffect 의존성 배열 없음 처음 한 번만 렌더링
-  
-  
+function Lnb({page}){  
   return (
     <Warp>
       <ul className='lnb-ul'>
