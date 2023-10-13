@@ -5,6 +5,7 @@ import styled from "styled-components";
 import '../../build-css/tab.css';
 import { Link } from "react-router-dom";
 import { Products } from '../../constants/Products'
+import { LazyLoadImage } from "react-lazy-load-image-component";
 // import Items from './items'
 const Items = lazy(() => import('./items'));
 
@@ -58,7 +59,7 @@ function Tabs(){
     <Container className='tabArea'>
       <H1>category BEST</H1>
       <Link to={`/productDetail/${result[tabIndex.current].id}`}>
-        <Thumb className='thumb' src={result[tabIndex.current].img} alt="face"/>
+        <LazyLoadImage className='thumb' src={result[tabIndex.current].img} alt="face"/>
         {/* <h3>{result[tabIndex.current].title}</h3> */}
       </Link>      
       <Suspense fallback={<Skeleton height={100} />}>
