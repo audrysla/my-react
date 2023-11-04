@@ -1,0 +1,24 @@
+{
+    // .map파일 생성 여부
+    "liveSassCompile.settings.generateMap": false,
+    
+    // compile 형식, 확장자명, 저장 경로 설정
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",   //nested, expanded, compact, compressed
+            "extensionName": ".css",
+            "savePath": "~/../build-css"
+        }
+    ],
+    
+    // 크로스브라우징을 위한 prefix 설정
+    "liveSassCompile.settings.autoprefix": [ 
+        "> 1%", 
+        "last 2 versions" 
+    ],
+    "liveSassCompile.settings.includeItems": [],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ]
+}

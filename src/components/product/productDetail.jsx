@@ -113,7 +113,7 @@ function ProductDetail(){
             </table>
           </Div>
         </Wrap>
-        <Comment/>
+        <Comment/>        
       </div>
     </>
   )
