@@ -61,7 +61,7 @@ function Contents(){
             <PC><Tab/></PC>
           </Container>
           <MainProduct>
-            <PC><H1>추천 상품 404</H1></PC>
+            <PC><H1>추천 상품</H1></PC>
             <div className="banner bn1">추석 선물</div>
           </MainProduct> 
           
